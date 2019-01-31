@@ -5,7 +5,7 @@
 
 ## How to Install and Test
 
-1. Choose measurement tasks and use the command `make *` under the directory `demo` to generate executable files and run them with user-defined experiment parameters
+1. Choose measurement tasks and use the command `make *` under the directory `demo` to generate executable files and run them with user-defined experimental parameters
 
 - `testflowsize`: perform flow size estimation
 - `testheavychange`: perform heavy change finding 
@@ -21,6 +21,6 @@
 - `testburst`: perform burst finding
 - `testspeed`: perform speed test
 
-2. Or use corresponding scripts `*.sh` to perform the tasks with default experiment parameters
+2. Or use corresponding scripts `*.sh` to perform the tasks with default experimental parameters (`./all` for all)
 
 	**Note that all the experimental results are stored in the directory `results`.**

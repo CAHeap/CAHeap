@@ -18,13 +18,16 @@ efficiency, and cross-platform implementation. To achieve efficiency in terms of
 - more details can be found within above six folders.
 
 ## Prerequisites
+- Git Large File Storage (LFS)
 - cuda 9.0
 - [isa-l](https://github.com/01org/isa-l)
 - g++
 - SIMD instructions are involved in CAHeap to achieve higher speed, so the CPU must support AVX2 instruction set.
 
+  **Note: Please use command `git lfs clone` to clone our project**
+
 ## How to make
-- For CPU and GPU implementation, change to directory `src` and use command `./auto_make` to make, then you can find executable files in the corresponding directories.
+- For CPU and GPU implementation, change to directory `src` and use command `./auto_make.sh` to make, then you can find executable files in the corresponding directories.
 - As `ns-2`, `FPGA`, `OVS`, and `P4` implementations need specific platforms, please check `README` and try them on real devices or virtual machines.
 
 
