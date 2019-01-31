@@ -4,5 +4,5 @@ The results of experiments show that the throughput of AHEAP on GPU can achieve 
 
 ## How to Test
 
-Run commond `./test.sh`. It changes the batch size in the command line and gets processing throughput.
+Run command `./test.sh`. It changes the batch size in the command line and gets processing throughput.
 
