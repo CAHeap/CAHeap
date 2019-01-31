@@ -7,7 +7,7 @@ efficiency, and cross-platform implementation. To achieve efficiency in terms of
 ## About this Repository
 
 - `results`: experimental results in terms of different measurement tasks  
-- `data`: traces with different time intervals (5s, 30s, and 60s) for test
+- `data`: traces with different time intervals (5s and 60s) for test
 - `src` contains code impelementations on different platforms:
   - `CPU`: CAHeap and other algorithms implemented on CPU
   - `FPGA`: CAHeap implemented on FPGA
