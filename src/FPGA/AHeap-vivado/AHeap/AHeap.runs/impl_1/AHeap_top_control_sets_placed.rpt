@@ -1,0 +1,104 @@
+Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
+--------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2018.1 (win64) Build 2188600 Wed Apr  4 18:40:38 MDT 2018
+| Date         : Mon Jan 21 19:22:11 2019
+| Host         : WIN-01609101751 running 64-bit major release  (build 9200)
+| Command      : report_control_sets -verbose -file AHeap_top_control_sets_placed.rpt
+| Design       : AHeap_top
+| Device       : xc7z100
+--------------------------------------------------------------------------------------
+
+Control Set Information
+
+Table of Contents
+-----------------
+1. Summary
+2. Histogram
+3. Flip-Flop Distribution
+4. Detailed Control Set Information
+
+1. Summary
+----------
+
++----------------------------------------------------------+-------+
+|                          Status                          | Count |
++----------------------------------------------------------+-------+
+| Number of unique control sets                            |    33 |
+| Unused register locations in slices containing registers |   107 |
++----------------------------------------------------------+-------+
+
+
+2. Histogram
+------------
+
++--------+--------------+
+| Fanout | Control Sets |
++--------+--------------+
+|      4 |            6 |
+|      5 |            3 |
+|     10 |            2 |
+|     11 |            1 |
+|     12 |            1 |
+|     13 |            1 |
+|     14 |            1 |
+|    16+ |           18 |
++--------+--------------+
+
+
+3. Flip-Flop Distribution
+-------------------------
+
++--------------+-----------------------+------------------------+-----------------+--------------+
+| Clock Enable | Synchronous Set/Reset | Asynchronous Set/Reset | Total Registers | Total Slices |
++--------------+-----------------------+------------------------+-----------------+--------------+
+| No           | No                    | No                     |            1108 |          436 |
+| No           | No                    | Yes                    |            3305 |         1332 |
+| No           | Yes                   | No                     |               0 |            0 |
+| Yes          | No                    | No                     |               0 |            0 |
+| Yes          | No                    | Yes                    |            3272 |         1148 |
+| Yes          | Yes                   | No                     |               0 |            0 |
++--------------+-----------------------+------------------------+-----------------+--------------+
+
+
+4. Detailed Control Set Information
+-----------------------------------
+
++---------------------------------------------------------------------------+------------------------------------------------------------------------+---------------------+------------------+----------------+
+|                                Clock Signal                               |                              Enable Signal                             |   Set/Reset Signal  | Slice Load Count | Bel Load Count |
++---------------------------------------------------------------------------+------------------------------------------------------------------------+---------------------+------------------+----------------+
+|  SYS_CLK_IBUF_BUFG                                                        | delft2/scfifo_224_16_pkt_fifo/SYNC.scfifo_inst/wptr_reg[3]_0[0]        | delft0/hash_2/AR[0] |                2 |              4 |
+|  SYS_CLK_IBUF_BUFG                                                        | winnertree1/scfifo_224_16_pkt_fifo/SYNC.scfifo_inst/wptr_reg[3]_0[0]   | delft0/hash_2/AR[0] |                2 |              4 |
+|  SYS_CLK_IBUF_BUFG                                                        | delft0/scfifo_224_16_pkt_fifo/SYNC.scfifo_inst/wptr_reg[3]_0[0]        | delft0/hash_2/AR[0] |                2 |              4 |
+|  SYS_CLK_IBUF_BUFG                                                        | delft1/scfifo_224_16_pkt_fifo/SYNC.scfifo_inst/wptr_reg[3]_0[0]        | delft0/hash_2/AR[0] |                2 |              4 |
+|  SYS_CLK_IBUF_BUFG                                                        | winnertree2/scfifo_224_16_pkt_fifo/SYNC.scfifo_inst/E[0]               | delft0/hash_2/AR[0] |                1 |              4 |
+|  SYS_CLK_IBUF_BUFG                                                        | winnertree0/scfifo_224_16_pkt_fifo/SYNC.scfifo_inst/wptr_reg[3]_0[0]   | delft0/hash_2/AR[0] |                2 |              4 |
+|  SYS_CLK_IBUF_BUFG                                                        | winnertree0/scfifo_224_16_pkt_fifo/SYNC.scfifo_inst/rptr[4]_i_1__2_n_0 | delft0/hash_2/AR[0] |                1 |              5 |
+|  SYS_CLK_IBUF_BUFG                                                        | winnertree1/scfifo_224_16_pkt_fifo/SYNC.scfifo_inst/rptr[4]_i_1__3_n_0 | delft0/hash_2/AR[0] |                3 |              5 |
+|  SYS_CLK_IBUF_BUFG                                                        | winnertree2/scfifo_224_16_pkt_fifo/SYNC.scfifo_inst/rptr[4]_i_1__4_n_0 | delft0/hash_2/AR[0] |                2 |              5 |
+|  SYS_CLK_IBUF_BUFG                                                        |                                                                        |                     |                5 |             10 |
+|  SYS_CLK_IBUF_BUFG                                                        | winnertree1/ram_rden_a                                                 | delft0/hash_2/AR[0] |                3 |             10 |
+|  SYS_CLK_IBUF_BUFG                                                        | winnertree0/ram_rden_a                                                 | delft0/hash_2/AR[0] |                5 |             11 |
+|  SYS_CLK_IBUF_BUFG                                                        | delft2/ram_rden_a                                                      | delft0/hash_2/AR[0] |                3 |             12 |
+|  SYS_CLK_IBUF_BUFG                                                        | delft1/ram_rden_a                                                      | delft0/hash_2/AR[0] |                6 |             13 |
+|  SYS_CLK_IBUF_BUFG                                                        | delft0/ram_rden_a                                                      | delft0/hash_2/AR[0] |                8 |             14 |
+|  SYS_CLK_IBUF_BUFG                                                        | winnertree1/hash_2/E[0]                                                | delft0/hash_2/AR[0] |               18 |             64 |
+|  SYS_CLK_IBUF_BUFG                                                        | delft0/ram_data_a[191]_i_1_n_0                                         | delft0/hash_2/AR[0] |               95 |            193 |
+|  SYS_CLK_IBUF_BUFG                                                        | delft1/ram_data_a[191]_i_1__0_n_0                                      | delft0/hash_2/AR[0] |               79 |            193 |
+|  SYS_CLK_IBUF_BUFG                                                        | winnertree0/ram_data_a[191]_i_1__2_n_0                                 | delft0/hash_2/AR[0] |               86 |            193 |
+|  SYS_CLK_IBUF_BUFG                                                        | delft2/ram_data_a[191]_i_1__1_n_0                                      | delft0/hash_2/AR[0] |               72 |            193 |
+|  SYS_CLK_IBUF_BUFG                                                        | winnertree1/ram_data_a[191]_i_1__3_n_0                                 | delft0/hash_2/AR[0] |               89 |            193 |
+| ~winnertree1/scfifo_224_16_pkt_fifo/SYNC.scfifo_inst/Empty_reg_reg_0_BUFG |                                                                        |                     |               73 |            202 |
+| ~delft1/scfifo_224_16_pkt_fifo/SYNC.scfifo_inst/Empty_reg_reg_0_BUFG      |                                                                        |                     |              101 |            224 |
+| ~delft2/scfifo_224_16_pkt_fifo/SYNC.scfifo_inst/Empty_reg_reg_0_BUFG      |                                                                        |                     |              104 |            224 |
+| ~winnertree0/scfifo_224_16_pkt_fifo/SYNC.scfifo_inst/Empty_reg_reg_0_BUFG |                                                                        |                     |               76 |            224 |
+|  SYS_CLK_IBUF_BUFG                                                        | delft0/hash_2/E[0]                                                     | delft0/hash_2/AR[0] |               69 |            224 |
+|  SYS_CLK_IBUF_BUFG                                                        | delft1/hash_2/E[0]                                                     | delft0/hash_2/AR[0] |               69 |            224 |
+|  SYS_CLK_IBUF_BUFG                                                        | delft2/hash_2/E[0]                                                     | delft0/hash_2/AR[0] |               91 |            224 |
+|  SYS_CLK_IBUF_BUFG                                                        | winnertree0/hash_2/E[0]                                                | delft0/hash_2/AR[0] |               88 |            224 |
+| ~delft0/scfifo_224_16_pkt_fifo/SYNC.scfifo_inst/Empty_reg_reg_0_BUFG      |                                                                        |                     |               77 |            224 |
+|  SYS_CLK_IBUF_BUFG                                                        | winnertree1/check_key_q_reg0[223]_i_1__0_n_0                           | delft0/hash_2/AR[0] |              160 |            576 |
+|  SYS_CLK_IBUF_BUFG                                                        | winnertree0/check_key_q_reg0[223]_i_1_n_0                              | delft0/hash_2/AR[0] |              190 |            672 |
+|  SYS_CLK_IBUF_BUFG                                                        |                                                                        | delft0/hash_2/AR[0] |             1332 |           3305 |
++---------------------------------------------------------------------------+------------------------------------------------------------------------+---------------------+------------------+----------------+
+
+

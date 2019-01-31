@@ -1,0 +1,24 @@
+#-----------------------------------------------------------
+# Vivado v2018.1 (64-bit)
+# SW Build 2188600 on Wed Apr  4 18:40:38 MDT 2018
+# IP Build 2185939 on Wed Apr  4 20:55:05 MDT 2018
+# Start of session at: Thu Jan 31 10:21:57 2019
+# Process ID: 4920
+# Current directory: F:/work files/AHeap-vivado/AHeap
+# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent3480 F:\work files\AHeap-vivado\AHeap\AHeap.xpr
+# Log file: F:/work files/AHeap-vivado/AHeap/vivado.log
+# Journal file: F:/work files/AHeap-vivado/AHeap\vivado.jou
+#-----------------------------------------------------------
+start_gui
+open_project {F:/work files/AHeap-vivado/AHeap/AHeap.xpr}
+Scanning sources...
+Finished scanning sources
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1704] No user IP repositories specified
+INFO: [IP_Flow 19-2313] Loaded Vivado IP repository 'E:/Xilinx/Vivado/2018.1/data/ip'.
+open_project: Time (s): cpu = 00:00:13 ; elapsed = 00:00:08 . Memory (MB): peak = 937.125 ; gain = 193.785
+update_compile_order -fileset sources_1
+export_ip_user_files -of_objects  [get_files {{F:/work files/AHeap-vivado/xilblksyncram.v}}] -no_script -reset -force -quiet
+remove_files  {{F:/work files/AHeap-vivado/xilblksyncram.v}}
+exit
+INFO: [Common 17-206] Exiting Vivado at Thu Jan 31 10:27:14 2019...

@@ -1,0 +1,12 @@
+#-----------------------------------------------------------
+# Vivado v2018.1 (64-bit)
+# SW Build 2188600 on Wed Apr  4 18:40:38 MDT 2018
+# IP Build 2185939 on Wed Apr  4 20:55:05 MDT 2018
+# Start of session at: Mon Jan 21 19:16:20 2019
+# Process ID: 6312
+# Current directory: F:/work files/AHeap-vivado/AHeap/AHeap.runs/synth_1
+# Command line: vivado.exe -log AHeap_top.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source AHeap_top.tcl
+# Log file: F:/work files/AHeap-vivado/AHeap/AHeap.runs/synth_1/AHeap_top.vds
+# Journal file: F:/work files/AHeap-vivado/AHeap/AHeap.runs/synth_1\vivado.jou
+#-----------------------------------------------------------
+source AHeap_top.tcl -notrace

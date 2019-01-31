@@ -1,0 +1,1252 @@
+#-----------------------------------------------------------
+# Vivado v2018.1 (64-bit)
+# SW Build 2188600 on Wed Apr  4 18:40:38 MDT 2018
+# IP Build 2185939 on Wed Apr  4 20:55:05 MDT 2018
+# Start of session at: Mon Jan 21 19:16:20 2019
+# Process ID: 6312
+# Current directory: F:/work files/AHeap-vivado/AHeap/AHeap.runs/synth_1
+# Command line: vivado.exe -log AHeap_top.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source AHeap_top.tcl
+# Log file: F:/work files/AHeap-vivado/AHeap/AHeap.runs/synth_1/AHeap_top.vds
+# Journal file: F:/work files/AHeap-vivado/AHeap/AHeap.runs/synth_1\vivado.jou
+#-----------------------------------------------------------
+source AHeap_top.tcl -notrace
+Command: synth_design -top AHeap_top -part xc7z100ffg900-2
+Starting synth_design
+Attempting to get a license for feature 'Synthesis' and/or device 'xc7z100'
+INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7z100'
+INFO: Launching helper process for spawning children vivado processes
+INFO: Helper process launched with PID 5284 
+WARNING: [Synth 8-2507] parameter declaration becomes local in Dleft with formal parameter declaration list [F:/work files/AHeap-vivado/Dleft.v:88]
+WARNING: [Synth 8-2507] parameter declaration becomes local in Dleft with formal parameter declaration list [F:/work files/AHeap-vivado/Dleft.v:98]
+WARNING: [Synth 8-2507] parameter declaration becomes local in winnertree with formal parameter declaration list [F:/work files/AHeap-vivado/winnertree.v:88]
+WARNING: [Synth 8-2507] parameter declaration becomes local in winnertree with formal parameter declaration list [F:/work files/AHeap-vivado/winnertree.v:98]
+---------------------------------------------------------------------------------
+Starting RTL Elaboration : Time (s): cpu = 00:00:06 ; elapsed = 00:00:06 . Memory (MB): peak = 460.309 ; gain = 113.848
+---------------------------------------------------------------------------------
+INFO: [Synth 8-6157] synthesizing module 'AHeap_top' [F:/work files/AHeap-vivado/AHeap_top.v:27]
+INFO: [Synth 8-6157] synthesizing module 'half32_128bit' [F:/work files/AHeap-vivado/half32_128bit.v:27]
+INFO: [Synth 8-6155] done synthesizing module 'half32_128bit' (1#1) [F:/work files/AHeap-vivado/half32_128bit.v:27]
+INFO: [Synth 8-6157] synthesizing module 'Dleft' [F:/work files/AHeap-vivado/Dleft.v:27]
+	Parameter RAMAddWidth bound to: 14 - type: integer 
+	Parameter DataDepth bound to: 16384 - type: integer 
+	Parameter idle_s bound to: 4'b0000 
+	Parameter pharse_1_s bound to: 4'b0001 
+	Parameter pharse_2_s bound to: 4'b0010 
+	Parameter pharse_3_s bound to: 4'b0011 
+	Parameter pharse_4_s bound to: 4'b0100 
+	Parameter wait_1_s bound to: 4'b0101 
+	Parameter wait_2_s bound to: 4'b0110 
+	Parameter read_s bound to: 4'b0111 
+	Parameter idle_d bound to: 4'b0000 
+	Parameter read_d bound to: 4'b0001 
+	Parameter write_d bound to: 4'b0010 
+	Parameter wait_1_d bound to: 4'b0011 
+	Parameter wait_2_d bound to: 4'b0100 
+	Parameter rec_data_d bound to: 4'b0101 
+	Parameter wait_cs_d bound to: 4'b0110 
+	Parameter inital_d bound to: 4'b0111 
+INFO: [Synth 8-6157] synthesizing module 'fifo_top' [F:/work files/AHeap-vivado/fifo_top.v:27]
+	Parameter ShowHead bound to: 1 - type: integer 
+	Parameter SynMode bound to: 1 - type: integer 
+	Parameter DataWidth bound to: 224 - type: integer 
+	Parameter DataDepth bound to: 16 - type: integer 
+	Parameter RAMAddWidth bound to: 4 - type: integer 
+INFO: [Synth 8-6157] synthesizing module 'SYNCFIFO' [F:/work files/AHeap-vivado/SYNCFIFO.v:28]
+	Parameter ShowHead bound to: 1 - type: integer 
+	Parameter DataWidth bound to: 224 - type: integer 
+	Parameter DataDepth bound to: 16 - type: integer 
+	Parameter RAMAddWidth bound to: 4 - type: integer 
+	Parameter AddWidth bound to: 4 - type: integer 
+INFO: [Synth 8-6155] done synthesizing module 'SYNCFIFO' (2#1) [F:/work files/AHeap-vivado/SYNCFIFO.v:28]
+INFO: [Synth 8-6155] done synthesizing module 'fifo_top' (3#1) [F:/work files/AHeap-vivado/fifo_top.v:27]
+INFO: [Synth 8-6157] synthesizing module 'blk_mem_gen_0' [F:/work files/AHeap-vivado/AHeap/AHeap.runs/synth_1/.Xil/Vivado-6312-WIN-01609101751/realtime/blk_mem_gen_0_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'blk_mem_gen_0' (4#1) [F:/work files/AHeap-vivado/AHeap/AHeap.runs/synth_1/.Xil/Vivado-6312-WIN-01609101751/realtime/blk_mem_gen_0_stub.v:6]
+INFO: [Synth 8-6157] synthesizing module 'ASYNCRAM' [F:/work files/AHeap-vivado/ASYNCRAM.v:27]
+	Parameter DataWidth bound to: 192 - type: integer 
+	Parameter DataDepth bound to: 16384 - type: integer 
+	Parameter RAMAddWidth bound to: 14 - type: integer 
+INFO: [Synth 8-6155] done synthesizing module 'ASYNCRAM' (5#1) [F:/work files/AHeap-vivado/ASYNCRAM.v:27]
+INFO: [Synth 8-6157] synthesizing module 'blk_mem_gen_1' [F:/work files/AHeap-vivado/AHeap/AHeap.runs/synth_1/.Xil/Vivado-6312-WIN-01609101751/realtime/blk_mem_gen_1_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'blk_mem_gen_1' (6#1) [F:/work files/AHeap-vivado/AHeap/AHeap.runs/synth_1/.Xil/Vivado-6312-WIN-01609101751/realtime/blk_mem_gen_1_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'Dleft' (7#1) [F:/work files/AHeap-vivado/Dleft.v:27]
+INFO: [Synth 8-6157] synthesizing module 'Dleft__parameterized0' [F:/work files/AHeap-vivado/Dleft.v:27]
+	Parameter RAMAddWidth bound to: 13 - type: integer 
+	Parameter DataDepth bound to: 8192 - type: integer 
+	Parameter idle_s bound to: 4'b0000 
+	Parameter pharse_1_s bound to: 4'b0001 
+	Parameter pharse_2_s bound to: 4'b0010 
+	Parameter pharse_3_s bound to: 4'b0011 
+	Parameter pharse_4_s bound to: 4'b0100 
+	Parameter wait_1_s bound to: 4'b0101 
+	Parameter wait_2_s bound to: 4'b0110 
+	Parameter read_s bound to: 4'b0111 
+	Parameter idle_d bound to: 4'b0000 
+	Parameter read_d bound to: 4'b0001 
+	Parameter write_d bound to: 4'b0010 
+	Parameter wait_1_d bound to: 4'b0011 
+	Parameter wait_2_d bound to: 4'b0100 
+	Parameter rec_data_d bound to: 4'b0101 
+	Parameter wait_cs_d bound to: 4'b0110 
+	Parameter inital_d bound to: 4'b0111 
+INFO: [Synth 8-6157] synthesizing module 'ASYNCRAM__parameterized0' [F:/work files/AHeap-vivado/ASYNCRAM.v:27]
+	Parameter DataWidth bound to: 192 - type: integer 
+	Parameter DataDepth bound to: 8192 - type: integer 
+	Parameter RAMAddWidth bound to: 13 - type: integer 
+INFO: [Synth 8-6155] done synthesizing module 'ASYNCRAM__parameterized0' (7#1) [F:/work files/AHeap-vivado/ASYNCRAM.v:27]
+WARNING: [Synth 8-689] width (13) of port connection 'addra' does not match port width (14) of module 'blk_mem_gen_1' [F:/work files/AHeap-vivado/Dleft.v:575]
+WARNING: [Synth 8-689] width (13) of port connection 'addrb' does not match port width (14) of module 'blk_mem_gen_1' [F:/work files/AHeap-vivado/Dleft.v:581]
+INFO: [Synth 8-6155] done synthesizing module 'Dleft__parameterized0' (7#1) [F:/work files/AHeap-vivado/Dleft.v:27]
+INFO: [Synth 8-6157] synthesizing module 'Dleft__parameterized1' [F:/work files/AHeap-vivado/Dleft.v:27]
+	Parameter RAMAddWidth bound to: 12 - type: integer 
+	Parameter DataDepth bound to: 4096 - type: integer 
+	Parameter idle_s bound to: 4'b0000 
+	Parameter pharse_1_s bound to: 4'b0001 
+	Parameter pharse_2_s bound to: 4'b0010 
+	Parameter pharse_3_s bound to: 4'b0011 
+	Parameter pharse_4_s bound to: 4'b0100 
+	Parameter wait_1_s bound to: 4'b0101 
+	Parameter wait_2_s bound to: 4'b0110 
+	Parameter read_s bound to: 4'b0111 
+	Parameter idle_d bound to: 4'b0000 
+	Parameter read_d bound to: 4'b0001 
+	Parameter write_d bound to: 4'b0010 
+	Parameter wait_1_d bound to: 4'b0011 
+	Parameter wait_2_d bound to: 4'b0100 
+	Parameter rec_data_d bound to: 4'b0101 
+	Parameter wait_cs_d bound to: 4'b0110 
+	Parameter inital_d bound to: 4'b0111 
+INFO: [Synth 8-6157] synthesizing module 'ASYNCRAM__parameterized1' [F:/work files/AHeap-vivado/ASYNCRAM.v:27]
+	Parameter DataWidth bound to: 192 - type: integer 
+	Parameter DataDepth bound to: 4096 - type: integer 
+	Parameter RAMAddWidth bound to: 12 - type: integer 
+INFO: [Synth 8-6155] done synthesizing module 'ASYNCRAM__parameterized1' (7#1) [F:/work files/AHeap-vivado/ASYNCRAM.v:27]
+WARNING: [Synth 8-689] width (12) of port connection 'addra' does not match port width (14) of module 'blk_mem_gen_1' [F:/work files/AHeap-vivado/Dleft.v:575]
+WARNING: [Synth 8-689] width (12) of port connection 'addrb' does not match port width (14) of module 'blk_mem_gen_1' [F:/work files/AHeap-vivado/Dleft.v:581]
+INFO: [Synth 8-6155] done synthesizing module 'Dleft__parameterized1' (7#1) [F:/work files/AHeap-vivado/Dleft.v:27]
+INFO: [Synth 8-6157] synthesizing module 'winnertree' [F:/work files/AHeap-vivado/winnertree.v:27]
+	Parameter RAMAddWidth bound to: 11 - type: integer 
+	Parameter DataDepth bound to: 2048 - type: integer 
+	Parameter idle_s bound to: 4'b0000 
+	Parameter pharse_1_s bound to: 4'b0001 
+	Parameter pharse_2_s bound to: 4'b0010 
+	Parameter pharse_3_s bound to: 4'b0011 
+	Parameter pharse_4_s bound to: 4'b0100 
+	Parameter wait_1_s bound to: 4'b0101 
+	Parameter wait_2_s bound to: 4'b0110 
+	Parameter read_s bound to: 4'b0111 
+	Parameter idle_d bound to: 4'b0000 
+	Parameter read_d bound to: 4'b0001 
+	Parameter write_d bound to: 4'b0010 
+	Parameter wait_1_d bound to: 4'b0011 
+	Parameter wait_2_d bound to: 4'b0100 
+	Parameter rec_data_d bound to: 4'b0101 
+	Parameter wait_cs_d bound to: 4'b0110 
+	Parameter inital_d bound to: 4'b0111 
+WARNING: [Synth 8-151] case item 4'b0101 is unreachable [F:/work files/AHeap-vivado/winnertree.v:199]
+WARNING: [Synth 8-151] case item 4'b0110 is unreachable [F:/work files/AHeap-vivado/winnertree.v:199]
+INFO: [Synth 8-6157] synthesizing module 'ASYNCRAM__parameterized2' [F:/work files/AHeap-vivado/ASYNCRAM.v:27]
+	Parameter DataWidth bound to: 192 - type: integer 
+	Parameter DataDepth bound to: 2048 - type: integer 
+	Parameter RAMAddWidth bound to: 11 - type: integer 
+INFO: [Synth 8-6155] done synthesizing module 'ASYNCRAM__parameterized2' (7#1) [F:/work files/AHeap-vivado/ASYNCRAM.v:27]
+WARNING: [Synth 8-689] width (11) of port connection 'addra' does not match port width (14) of module 'blk_mem_gen_1' [F:/work files/AHeap-vivado/winnertree.v:586]
+WARNING: [Synth 8-689] width (11) of port connection 'addrb' does not match port width (14) of module 'blk_mem_gen_1' [F:/work files/AHeap-vivado/winnertree.v:592]
+INFO: [Synth 8-6155] done synthesizing module 'winnertree' (8#1) [F:/work files/AHeap-vivado/winnertree.v:27]
+INFO: [Synth 8-6157] synthesizing module 'winnertree__parameterized0' [F:/work files/AHeap-vivado/winnertree.v:27]
+	Parameter RAMAddWidth bound to: 10 - type: integer 
+	Parameter DataDepth bound to: 1024 - type: integer 
+	Parameter idle_s bound to: 4'b0000 
+	Parameter pharse_1_s bound to: 4'b0001 
+	Parameter pharse_2_s bound to: 4'b0010 
+	Parameter pharse_3_s bound to: 4'b0011 
+	Parameter pharse_4_s bound to: 4'b0100 
+	Parameter wait_1_s bound to: 4'b0101 
+	Parameter wait_2_s bound to: 4'b0110 
+	Parameter read_s bound to: 4'b0111 
+	Parameter idle_d bound to: 4'b0000 
+	Parameter read_d bound to: 4'b0001 
+	Parameter write_d bound to: 4'b0010 
+	Parameter wait_1_d bound to: 4'b0011 
+	Parameter wait_2_d bound to: 4'b0100 
+	Parameter rec_data_d bound to: 4'b0101 
+	Parameter wait_cs_d bound to: 4'b0110 
+	Parameter inital_d bound to: 4'b0111 
+WARNING: [Synth 8-151] case item 4'b0101 is unreachable [F:/work files/AHeap-vivado/winnertree.v:199]
+WARNING: [Synth 8-151] case item 4'b0110 is unreachable [F:/work files/AHeap-vivado/winnertree.v:199]
+INFO: [Synth 8-6157] synthesizing module 'ASYNCRAM__parameterized3' [F:/work files/AHeap-vivado/ASYNCRAM.v:27]
+	Parameter DataWidth bound to: 192 - type: integer 
+	Parameter DataDepth bound to: 1024 - type: integer 
+	Parameter RAMAddWidth bound to: 10 - type: integer 
+INFO: [Synth 8-6155] done synthesizing module 'ASYNCRAM__parameterized3' (8#1) [F:/work files/AHeap-vivado/ASYNCRAM.v:27]
+WARNING: [Synth 8-689] width (10) of port connection 'addra' does not match port width (14) of module 'blk_mem_gen_1' [F:/work files/AHeap-vivado/winnertree.v:586]
+WARNING: [Synth 8-689] width (10) of port connection 'addrb' does not match port width (14) of module 'blk_mem_gen_1' [F:/work files/AHeap-vivado/winnertree.v:592]
+INFO: [Synth 8-6155] done synthesizing module 'winnertree__parameterized0' (8#1) [F:/work files/AHeap-vivado/winnertree.v:27]
+INFO: [Synth 8-6157] synthesizing module 'winnertree__parameterized1' [F:/work files/AHeap-vivado/winnertree.v:27]
+	Parameter RAMAddWidth bound to: 9 - type: integer 
+	Parameter DataDepth bound to: 512 - type: integer 
+	Parameter idle_s bound to: 4'b0000 
+	Parameter pharse_1_s bound to: 4'b0001 
+	Parameter pharse_2_s bound to: 4'b0010 
+	Parameter pharse_3_s bound to: 4'b0011 
+	Parameter pharse_4_s bound to: 4'b0100 
+	Parameter wait_1_s bound to: 4'b0101 
+	Parameter wait_2_s bound to: 4'b0110 
+	Parameter read_s bound to: 4'b0111 
+	Parameter idle_d bound to: 4'b0000 
+	Parameter read_d bound to: 4'b0001 
+	Parameter write_d bound to: 4'b0010 
+	Parameter wait_1_d bound to: 4'b0011 
+	Parameter wait_2_d bound to: 4'b0100 
+	Parameter rec_data_d bound to: 4'b0101 
+	Parameter wait_cs_d bound to: 4'b0110 
+	Parameter inital_d bound to: 4'b0111 
+WARNING: [Synth 8-151] case item 4'b0101 is unreachable [F:/work files/AHeap-vivado/winnertree.v:199]
+WARNING: [Synth 8-151] case item 4'b0110 is unreachable [F:/work files/AHeap-vivado/winnertree.v:199]
+INFO: [Synth 8-6157] synthesizing module 'ASYNCRAM__parameterized4' [F:/work files/AHeap-vivado/ASYNCRAM.v:27]
+	Parameter DataWidth bound to: 192 - type: integer 
+	Parameter DataDepth bound to: 512 - type: integer 
+	Parameter RAMAddWidth bound to: 9 - type: integer 
+INFO: [Synth 8-6155] done synthesizing module 'ASYNCRAM__parameterized4' (8#1) [F:/work files/AHeap-vivado/ASYNCRAM.v:27]
+WARNING: [Synth 8-689] width (9) of port connection 'addra' does not match port width (14) of module 'blk_mem_gen_1' [F:/work files/AHeap-vivado/winnertree.v:586]
+WARNING: [Synth 8-689] width (9) of port connection 'addrb' does not match port width (14) of module 'blk_mem_gen_1' [F:/work files/AHeap-vivado/winnertree.v:592]
+INFO: [Synth 8-6155] done synthesizing module 'winnertree__parameterized1' (8#1) [F:/work files/AHeap-vivado/winnertree.v:27]
+INFO: [Synth 8-6155] done synthesizing module 'AHeap_top' (9#1) [F:/work files/AHeap-vivado/AHeap_top.v:27]
+WARNING: [Synth 8-3331] design fifo_top has unconnected port rdclk
+WARNING: [Synth 8-3331] design half32_128bit has unconnected port endofpacket
+---------------------------------------------------------------------------------
+Finished RTL Elaboration : Time (s): cpu = 00:00:07 ; elapsed = 00:00:07 . Memory (MB): peak = 516.031 ; gain = 169.570
+---------------------------------------------------------------------------------
+
+Report Check Netlist: 
++------+------------------+-------+---------+-------+------------------+
+|      |Item              |Errors |Warnings |Status |Description       |
++------+------------------+-------+---------+-------+------------------+
+|1     |multi_driven_nets |      0|        0|Passed |Multi driven nets |
++------+------------------+-------+---------+-------+------------------+
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:08 ; elapsed = 00:00:07 . Memory (MB): peak = 516.031 ; gain = 169.570
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:08 ; elapsed = 00:00:07 . Memory (MB): peak = 516.031 ; gain = 169.570
+---------------------------------------------------------------------------------
+INFO: [Device 21-403] Loading part xc7z100ffg900-2
+INFO: [Project 1-570] Preparing netlist for logic optimization
+
+Processing XDC Constraints
+Initializing timing engine
+Parsing XDC File [f:/work files/AHeap-vivado/AHeap/AHeap.srcs/sources_1/ip/blk_mem_gen_0/blk_mem_gen_0/blk_mem_gen_0_in_context.xdc] for cell 'delft0/ram_224_16_pkt0'
+Finished Parsing XDC File [f:/work files/AHeap-vivado/AHeap/AHeap.srcs/sources_1/ip/blk_mem_gen_0/blk_mem_gen_0/blk_mem_gen_0_in_context.xdc] for cell 'delft0/ram_224_16_pkt0'
+Parsing XDC File [f:/work files/AHeap-vivado/AHeap/AHeap.srcs/sources_1/ip/blk_mem_gen_0/blk_mem_gen_0/blk_mem_gen_0_in_context.xdc] for cell 'delft1/ram_224_16_pkt0'
+Finished Parsing XDC File [f:/work files/AHeap-vivado/AHeap/AHeap.srcs/sources_1/ip/blk_mem_gen_0/blk_mem_gen_0/blk_mem_gen_0_in_context.xdc] for cell 'delft1/ram_224_16_pkt0'
+Parsing XDC File [f:/work files/AHeap-vivado/AHeap/AHeap.srcs/sources_1/ip/blk_mem_gen_0/blk_mem_gen_0/blk_mem_gen_0_in_context.xdc] for cell 'delft2/ram_224_16_pkt0'
+Finished Parsing XDC File [f:/work files/AHeap-vivado/AHeap/AHeap.srcs/sources_1/ip/blk_mem_gen_0/blk_mem_gen_0/blk_mem_gen_0_in_context.xdc] for cell 'delft2/ram_224_16_pkt0'
+Parsing XDC File [f:/work files/AHeap-vivado/AHeap/AHeap.srcs/sources_1/ip/blk_mem_gen_0/blk_mem_gen_0/blk_mem_gen_0_in_context.xdc] for cell 'winnertree0/ram_224_16_pkt0'
+Finished Parsing XDC File [f:/work files/AHeap-vivado/AHeap/AHeap.srcs/sources_1/ip/blk_mem_gen_0/blk_mem_gen_0/blk_mem_gen_0_in_context.xdc] for cell 'winnertree0/ram_224_16_pkt0'
+Parsing XDC File [f:/work files/AHeap-vivado/AHeap/AHeap.srcs/sources_1/ip/blk_mem_gen_0/blk_mem_gen_0/blk_mem_gen_0_in_context.xdc] for cell 'winnertree1/ram_224_16_pkt0'
+Finished Parsing XDC File [f:/work files/AHeap-vivado/AHeap/AHeap.srcs/sources_1/ip/blk_mem_gen_0/blk_mem_gen_0/blk_mem_gen_0_in_context.xdc] for cell 'winnertree1/ram_224_16_pkt0'
+Parsing XDC File [f:/work files/AHeap-vivado/AHeap/AHeap.srcs/sources_1/ip/blk_mem_gen_0/blk_mem_gen_0/blk_mem_gen_0_in_context.xdc] for cell 'winnertree2/ram_224_16_pkt0'
+Finished Parsing XDC File [f:/work files/AHeap-vivado/AHeap/AHeap.srcs/sources_1/ip/blk_mem_gen_0/blk_mem_gen_0/blk_mem_gen_0_in_context.xdc] for cell 'winnertree2/ram_224_16_pkt0'
+Parsing XDC File [f:/work files/AHeap-vivado/AHeap/AHeap.srcs/sources_1/ip/blk_mem_gen_1/blk_mem_gen_1/blk_mem_gen_1_in_context.xdc] for cell 'delft0/hash2_ram_1024_192'
+Finished Parsing XDC File [f:/work files/AHeap-vivado/AHeap/AHeap.srcs/sources_1/ip/blk_mem_gen_1/blk_mem_gen_1/blk_mem_gen_1_in_context.xdc] for cell 'delft0/hash2_ram_1024_192'
+Parsing XDC File [f:/work files/AHeap-vivado/AHeap/AHeap.srcs/sources_1/ip/blk_mem_gen_1/blk_mem_gen_1/blk_mem_gen_1_in_context.xdc] for cell 'delft1/hash2_ram_1024_192'
+Finished Parsing XDC File [f:/work files/AHeap-vivado/AHeap/AHeap.srcs/sources_1/ip/blk_mem_gen_1/blk_mem_gen_1/blk_mem_gen_1_in_context.xdc] for cell 'delft1/hash2_ram_1024_192'
+Parsing XDC File [f:/work files/AHeap-vivado/AHeap/AHeap.srcs/sources_1/ip/blk_mem_gen_1/blk_mem_gen_1/blk_mem_gen_1_in_context.xdc] for cell 'delft2/hash2_ram_1024_192'
+Finished Parsing XDC File [f:/work files/AHeap-vivado/AHeap/AHeap.srcs/sources_1/ip/blk_mem_gen_1/blk_mem_gen_1/blk_mem_gen_1_in_context.xdc] for cell 'delft2/hash2_ram_1024_192'
+Parsing XDC File [f:/work files/AHeap-vivado/AHeap/AHeap.srcs/sources_1/ip/blk_mem_gen_1/blk_mem_gen_1/blk_mem_gen_1_in_context.xdc] for cell 'winnertree0/hash2_ram_1024_192'
+Finished Parsing XDC File [f:/work files/AHeap-vivado/AHeap/AHeap.srcs/sources_1/ip/blk_mem_gen_1/blk_mem_gen_1/blk_mem_gen_1_in_context.xdc] for cell 'winnertree0/hash2_ram_1024_192'
+Parsing XDC File [f:/work files/AHeap-vivado/AHeap/AHeap.srcs/sources_1/ip/blk_mem_gen_1/blk_mem_gen_1/blk_mem_gen_1_in_context.xdc] for cell 'winnertree1/hash2_ram_1024_192'
+Finished Parsing XDC File [f:/work files/AHeap-vivado/AHeap/AHeap.srcs/sources_1/ip/blk_mem_gen_1/blk_mem_gen_1/blk_mem_gen_1_in_context.xdc] for cell 'winnertree1/hash2_ram_1024_192'
+Parsing XDC File [f:/work files/AHeap-vivado/AHeap/AHeap.srcs/sources_1/ip/blk_mem_gen_1/blk_mem_gen_1/blk_mem_gen_1_in_context.xdc] for cell 'winnertree2/hash2_ram_1024_192'
+Finished Parsing XDC File [f:/work files/AHeap-vivado/AHeap/AHeap.srcs/sources_1/ip/blk_mem_gen_1/blk_mem_gen_1/blk_mem_gen_1_in_context.xdc] for cell 'winnertree2/hash2_ram_1024_192'
+Parsing XDC File [F:/work files/AHeap-vivado/AHeap/AHeap.srcs/constrs_1/new/AHeap.xdc]
+Finished Parsing XDC File [F:/work files/AHeap-vivado/AHeap/AHeap.srcs/constrs_1/new/AHeap.xdc]
+Completed Processing XDC Constraints
+
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+Constraint Validation Runtime : Time (s): cpu = 00:00:01 ; elapsed = 00:00:00.098 . Memory (MB): peak = 1020.285 ; gain = 3.547
+WARNING: [Timing 38-316] Clock period '20.000' specified during out-of-context synthesis of instance 'delft0/hash2_ram_1024_192' at clock pin 'clka' is different from the actual clock period '4.200', this can lead to different synthesis results.
+WARNING: [Timing 38-316] Clock period '20.000' specified during out-of-context synthesis of instance 'delft0/ram_224_16_pkt0' at clock pin 'clka' is different from the actual clock period '4.200', this can lead to different synthesis results.
+WARNING: [Timing 38-316] Clock period '20.000' specified during out-of-context synthesis of instance 'delft1/hash2_ram_1024_192' at clock pin 'clka' is different from the actual clock period '4.200', this can lead to different synthesis results.
+WARNING: [Timing 38-316] Clock period '20.000' specified during out-of-context synthesis of instance 'delft1/ram_224_16_pkt0' at clock pin 'clka' is different from the actual clock period '4.200', this can lead to different synthesis results.
+WARNING: [Timing 38-316] Clock period '20.000' specified during out-of-context synthesis of instance 'delft2/hash2_ram_1024_192' at clock pin 'clka' is different from the actual clock period '4.200', this can lead to different synthesis results.
+WARNING: [Timing 38-316] Clock period '20.000' specified during out-of-context synthesis of instance 'delft2/ram_224_16_pkt0' at clock pin 'clka' is different from the actual clock period '4.200', this can lead to different synthesis results.
+WARNING: [Timing 38-316] Clock period '20.000' specified during out-of-context synthesis of instance 'winnertree0/hash2_ram_1024_192' at clock pin 'clka' is different from the actual clock period '4.200', this can lead to different synthesis results.
+WARNING: [Timing 38-316] Clock period '20.000' specified during out-of-context synthesis of instance 'winnertree0/ram_224_16_pkt0' at clock pin 'clka' is different from the actual clock period '4.200', this can lead to different synthesis results.
+WARNING: [Timing 38-316] Clock period '20.000' specified during out-of-context synthesis of instance 'winnertree1/hash2_ram_1024_192' at clock pin 'clka' is different from the actual clock period '4.200', this can lead to different synthesis results.
+WARNING: [Timing 38-316] Clock period '20.000' specified during out-of-context synthesis of instance 'winnertree1/ram_224_16_pkt0' at clock pin 'clka' is different from the actual clock period '4.200', this can lead to different synthesis results.
+WARNING: [Timing 38-316] Clock period '20.000' specified during out-of-context synthesis of instance 'winnertree2/hash2_ram_1024_192' at clock pin 'clka' is different from the actual clock period '4.200', this can lead to different synthesis results.
+WARNING: [Timing 38-316] Clock period '20.000' specified during out-of-context synthesis of instance 'winnertree2/ram_224_16_pkt0' at clock pin 'clka' is different from the actual clock period '4.200', this can lead to different synthesis results.
+---------------------------------------------------------------------------------
+Finished Constraint Validation : Time (s): cpu = 00:00:25 ; elapsed = 00:00:26 . Memory (MB): peak = 1021.805 ; gain = 675.344
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Loading Part and Timing Information
+---------------------------------------------------------------------------------
+Loading part: xc7z100ffg900-2
+---------------------------------------------------------------------------------
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:25 ; elapsed = 00:00:26 . Memory (MB): peak = 1021.805 ; gain = 675.344
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Applying 'set_property' XDC Constraints
+---------------------------------------------------------------------------------
+Applied set_property DONT_TOUCH = true for delft0/ram_224_16_pkt0. (constraint file  auto generated constraint, line ).
+Applied set_property DONT_TOUCH = true for delft1/ram_224_16_pkt0. (constraint file  auto generated constraint, line ).
+Applied set_property DONT_TOUCH = true for delft2/ram_224_16_pkt0. (constraint file  auto generated constraint, line ).
+Applied set_property DONT_TOUCH = true for winnertree0/ram_224_16_pkt0. (constraint file  auto generated constraint, line ).
+Applied set_property DONT_TOUCH = true for winnertree1/ram_224_16_pkt0. (constraint file  auto generated constraint, line ).
+Applied set_property DONT_TOUCH = true for winnertree2/ram_224_16_pkt0. (constraint file  auto generated constraint, line ).
+Applied set_property DONT_TOUCH = true for delft0/hash2_ram_1024_192. (constraint file  auto generated constraint, line ).
+Applied set_property DONT_TOUCH = true for delft1/hash2_ram_1024_192. (constraint file  auto generated constraint, line ).
+Applied set_property DONT_TOUCH = true for delft2/hash2_ram_1024_192. (constraint file  auto generated constraint, line ).
+Applied set_property DONT_TOUCH = true for winnertree0/hash2_ram_1024_192. (constraint file  auto generated constraint, line ).
+Applied set_property DONT_TOUCH = true for winnertree1/hash2_ram_1024_192. (constraint file  auto generated constraint, line ).
+Applied set_property DONT_TOUCH = true for winnertree2/hash2_ram_1024_192. (constraint file  auto generated constraint, line ).
+---------------------------------------------------------------------------------
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:25 ; elapsed = 00:00:27 . Memory (MB): peak = 1021.805 ; gain = 675.344
+---------------------------------------------------------------------------------
+INFO: [Synth 8-5544] ROM "wptr1" won't be mapped to Block RAM because address size (4) smaller than threshold (5)
+INFO: [Synth 8-802] inferred FSM for state register 'localbus_state_reg' in module 'Dleft'
+INFO: [Synth 8-802] inferred FSM for state register 'lookup_state_reg' in module 'Dleft'
+INFO: [Synth 8-5544] ROM "count" won't be mapped to Block RAM because address size (3) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "ram_wren_b" won't be mapped to Block RAM because address size (4) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "ram_rden_b" won't be mapped to Block RAM because address size (4) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "ram_data_b" won't be mapped to Block RAM because address size (4) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "ram_addr_b" won't be mapped to Block RAM because address size (4) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "local_rdata" won't be mapped to Block RAM because address size (4) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "localbus_state" won't be mapped to Block RAM because address size (1) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "localbus_state" won't be mapped to Block RAM because address size (1) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "Dleft_out_key_wr" won't be mapped to Block RAM because address size (4) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "check_key_q_reg0" won't be mapped to Block RAM because address size (4) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "ram_addr_a" won't be mapped to Block RAM because address size (4) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "ram_data_a" won't be mapped to Block RAM because address size (4) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "check_key_rd" won't be mapped to Block RAM because address size (4) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "lookup_state" won't be mapped to Block RAM because address size (1) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "lookup_state" won't be mapped to Block RAM because address size (1) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "lookup_state" won't be mapped to Block RAM because address size (1) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "lookup_state" won't be mapped to Block RAM because address size (1) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "lookup_state" won't be mapped to Block RAM because address size (3) smaller than threshold (5)
+INFO: [Synth 8-802] inferred FSM for state register 'localbus_state_reg' in module 'Dleft__parameterized0'
+INFO: [Synth 8-802] inferred FSM for state register 'lookup_state_reg' in module 'Dleft__parameterized0'
+INFO: [Synth 8-5544] ROM "count" won't be mapped to Block RAM because address size (3) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "ram_wren_b" won't be mapped to Block RAM because address size (4) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "ram_rden_b" won't be mapped to Block RAM because address size (4) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "ram_data_b" won't be mapped to Block RAM because address size (4) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "ram_addr_b" won't be mapped to Block RAM because address size (4) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "local_rdata" won't be mapped to Block RAM because address size (4) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "localbus_state" won't be mapped to Block RAM because address size (1) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "localbus_state" won't be mapped to Block RAM because address size (1) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "Dleft_out_key_wr" won't be mapped to Block RAM because address size (4) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "check_key_q_reg0" won't be mapped to Block RAM because address size (4) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "ram_addr_a" won't be mapped to Block RAM because address size (4) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "ram_data_a" won't be mapped to Block RAM because address size (4) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "check_key_rd" won't be mapped to Block RAM because address size (4) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "lookup_state" won't be mapped to Block RAM because address size (1) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "lookup_state" won't be mapped to Block RAM because address size (1) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "lookup_state" won't be mapped to Block RAM because address size (1) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "lookup_state" won't be mapped to Block RAM because address size (1) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "lookup_state" won't be mapped to Block RAM because address size (3) smaller than threshold (5)
+INFO: [Synth 8-802] inferred FSM for state register 'localbus_state_reg' in module 'Dleft__parameterized1'
+INFO: [Synth 8-802] inferred FSM for state register 'lookup_state_reg' in module 'Dleft__parameterized1'
+INFO: [Synth 8-5544] ROM "count" won't be mapped to Block RAM because address size (3) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "ram_wren_b" won't be mapped to Block RAM because address size (4) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "ram_rden_b" won't be mapped to Block RAM because address size (4) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "ram_data_b" won't be mapped to Block RAM because address size (4) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "ram_addr_b" won't be mapped to Block RAM because address size (4) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "local_rdata" won't be mapped to Block RAM because address size (4) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "localbus_state" won't be mapped to Block RAM because address size (1) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "localbus_state" won't be mapped to Block RAM because address size (1) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "Dleft_out_key_wr" won't be mapped to Block RAM because address size (4) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "check_key_q_reg0" won't be mapped to Block RAM because address size (4) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "ram_addr_a" won't be mapped to Block RAM because address size (4) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "ram_data_a" won't be mapped to Block RAM because address size (4) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "check_key_rd" won't be mapped to Block RAM because address size (4) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "lookup_state" won't be mapped to Block RAM because address size (1) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "lookup_state" won't be mapped to Block RAM because address size (1) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "lookup_state" won't be mapped to Block RAM because address size (1) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "lookup_state" won't be mapped to Block RAM because address size (1) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "lookup_state" won't be mapped to Block RAM because address size (3) smaller than threshold (5)
+INFO: [Synth 8-802] inferred FSM for state register 'localbus_state_reg' in module 'winnertree'
+INFO: [Synth 8-802] inferred FSM for state register 'lookup_state_reg' in module 'winnertree'
+INFO: [Synth 8-5544] ROM "count" won't be mapped to Block RAM because address size (3) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "ram_wren_b" won't be mapped to Block RAM because address size (4) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "ram_rden_b" won't be mapped to Block RAM because address size (4) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "ram_data_b" won't be mapped to Block RAM because address size (4) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "ram_addr_b" won't be mapped to Block RAM because address size (4) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "local_rdata" won't be mapped to Block RAM because address size (4) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "localbus_state" won't be mapped to Block RAM because address size (1) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "localbus_state" won't be mapped to Block RAM because address size (1) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "Dleft_out_key_wr" won't be mapped to Block RAM because address size (4) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "check_key_q_reg0" won't be mapped to Block RAM because address size (4) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "ram_addr_a" won't be mapped to Block RAM because address size (4) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "ram_data_a" won't be mapped to Block RAM because address size (4) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "ram_rden_a" won't be mapped to Block RAM because address size (4) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "check_key_rd" won't be mapped to Block RAM because address size (4) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "lookup_state" won't be mapped to Block RAM because address size (1) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "lookup_state" won't be mapped to Block RAM because address size (1) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "lookup_state" won't be mapped to Block RAM because address size (1) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "lookup_state" won't be mapped to Block RAM because address size (1) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "lookup_state" won't be mapped to Block RAM because address size (3) smaller than threshold (5)
+INFO: [Synth 8-802] inferred FSM for state register 'localbus_state_reg' in module 'winnertree__parameterized0'
+INFO: [Synth 8-802] inferred FSM for state register 'lookup_state_reg' in module 'winnertree__parameterized0'
+INFO: [Synth 8-5544] ROM "count" won't be mapped to Block RAM because address size (3) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "ram_wren_b" won't be mapped to Block RAM because address size (4) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "ram_rden_b" won't be mapped to Block RAM because address size (4) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "ram_data_b" won't be mapped to Block RAM because address size (4) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "ram_addr_b" won't be mapped to Block RAM because address size (4) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "local_rdata" won't be mapped to Block RAM because address size (4) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "localbus_state" won't be mapped to Block RAM because address size (1) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "localbus_state" won't be mapped to Block RAM because address size (1) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "Dleft_out_key_wr" won't be mapped to Block RAM because address size (4) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "check_key_q_reg0" won't be mapped to Block RAM because address size (4) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "ram_addr_a" won't be mapped to Block RAM because address size (4) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "ram_data_a" won't be mapped to Block RAM because address size (4) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "ram_rden_a" won't be mapped to Block RAM because address size (4) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "check_key_rd" won't be mapped to Block RAM because address size (4) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "lookup_state" won't be mapped to Block RAM because address size (1) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "lookup_state" won't be mapped to Block RAM because address size (1) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "lookup_state" won't be mapped to Block RAM because address size (1) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "lookup_state" won't be mapped to Block RAM because address size (1) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "lookup_state" won't be mapped to Block RAM because address size (3) smaller than threshold (5)
+INFO: [Synth 8-802] inferred FSM for state register 'localbus_state_reg' in module 'winnertree__parameterized1'
+INFO: [Synth 8-802] inferred FSM for state register 'lookup_state_reg' in module 'winnertree__parameterized1'
+INFO: [Synth 8-5544] ROM "count" won't be mapped to Block RAM because address size (3) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "ram_wren_b" won't be mapped to Block RAM because address size (4) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "ram_rden_b" won't be mapped to Block RAM because address size (4) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "ram_data_b" won't be mapped to Block RAM because address size (4) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "ram_addr_b" won't be mapped to Block RAM because address size (4) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "local_rdata" won't be mapped to Block RAM because address size (4) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "localbus_state" won't be mapped to Block RAM because address size (1) smaller than threshold (5)
+INFO: [Common 17-14] Message 'Synth 8-5544' appears 100 times and further instances of the messages will be disabled. Use the Tcl command set_msg_config to change the current settings.
+WARNING: [Synth 8-327] inferring latch for variable 'ReadData' [F:/work files/AHeap-vivado/SYNCFIFO.v:168]
+---------------------------------------------------------------------------------------------------
+                   State |                     New Encoding |                Previous Encoding 
+---------------------------------------------------------------------------------------------------
+                  idle_s |                              000 |                             0000
+              pharse_1_s |                              001 |                             0001
+              pharse_2_s |                              010 |                             0010
+              pharse_3_s |                              011 |                             0011
+              pharse_4_s |                              100 |                             0100
+                wait_1_s |                              101 |                             0101
+                wait_2_s |                              110 |                             0110
+                  read_s |                              111 |                             0111
+---------------------------------------------------------------------------------------------------
+INFO: [Synth 8-3354] encoded FSM with state register 'lookup_state_reg' using encoding 'sequential' in module 'Dleft'
+---------------------------------------------------------------------------------------------------
+                   State |                     New Encoding |                Previous Encoding 
+---------------------------------------------------------------------------------------------------
+                  idle_d |                              000 |                             0000
+                 write_d |                              001 |                             0010
+                  read_d |                              010 |                             0001
+                wait_1_d |                              011 |                             0011
+                wait_2_d |                              100 |                             0100
+              rec_data_d |                              101 |                             0101
+               wait_cs_d |                              110 |                             0110
+---------------------------------------------------------------------------------------------------
+INFO: [Synth 8-3354] encoded FSM with state register 'localbus_state_reg' using encoding 'sequential' in module 'Dleft'
+---------------------------------------------------------------------------------------------------
+                   State |                     New Encoding |                Previous Encoding 
+---------------------------------------------------------------------------------------------------
+                  idle_s |                              000 |                             0000
+              pharse_1_s |                              001 |                             0001
+              pharse_2_s |                              010 |                             0010
+              pharse_3_s |                              011 |                             0011
+              pharse_4_s |                              100 |                             0100
+                wait_1_s |                              101 |                             0101
+                wait_2_s |                              110 |                             0110
+                  read_s |                              111 |                             0111
+---------------------------------------------------------------------------------------------------
+INFO: [Synth 8-3354] encoded FSM with state register 'lookup_state_reg' using encoding 'sequential' in module 'Dleft__parameterized0'
+---------------------------------------------------------------------------------------------------
+                   State |                     New Encoding |                Previous Encoding 
+---------------------------------------------------------------------------------------------------
+                  idle_d |                              000 |                             0000
+                 write_d |                              001 |                             0010
+                  read_d |                              010 |                             0001
+                wait_1_d |                              011 |                             0011
+                wait_2_d |                              100 |                             0100
+              rec_data_d |                              101 |                             0101
+               wait_cs_d |                              110 |                             0110
+---------------------------------------------------------------------------------------------------
+INFO: [Synth 8-3354] encoded FSM with state register 'localbus_state_reg' using encoding 'sequential' in module 'Dleft__parameterized0'
+---------------------------------------------------------------------------------------------------
+                   State |                     New Encoding |                Previous Encoding 
+---------------------------------------------------------------------------------------------------
+                  idle_s |                              000 |                             0000
+              pharse_1_s |                              001 |                             0001
+              pharse_2_s |                              010 |                             0010
+              pharse_3_s |                              011 |                             0011
+              pharse_4_s |                              100 |                             0100
+                wait_1_s |                              101 |                             0101
+                wait_2_s |                              110 |                             0110
+                  read_s |                              111 |                             0111
+---------------------------------------------------------------------------------------------------
+INFO: [Synth 8-3354] encoded FSM with state register 'lookup_state_reg' using encoding 'sequential' in module 'Dleft__parameterized1'
+---------------------------------------------------------------------------------------------------
+                   State |                     New Encoding |                Previous Encoding 
+---------------------------------------------------------------------------------------------------
+                  idle_d |                              000 |                             0000
+                 write_d |                              001 |                             0010
+                  read_d |                              010 |                             0001
+                wait_1_d |                              011 |                             0011
+                wait_2_d |                              100 |                             0100
+              rec_data_d |                              101 |                             0101
+               wait_cs_d |                              110 |                             0110
+---------------------------------------------------------------------------------------------------
+INFO: [Synth 8-3354] encoded FSM with state register 'localbus_state_reg' using encoding 'sequential' in module 'Dleft__parameterized1'
+---------------------------------------------------------------------------------------------------
+                   State |                     New Encoding |                Previous Encoding 
+---------------------------------------------------------------------------------------------------
+                  idle_s |                              000 |                             0000
+              pharse_1_s |                              001 |                             0001
+              pharse_2_s |                              010 |                             0010
+              pharse_3_s |                              011 |                             0011
+              pharse_4_s |                              100 |                             0100
+                wait_1_s |                              101 |                             0101
+                wait_2_s |                              110 |                             0110
+                  read_s |                              111 |                             0111
+---------------------------------------------------------------------------------------------------
+INFO: [Synth 8-3354] encoded FSM with state register 'lookup_state_reg' using encoding 'sequential' in module 'winnertree'
+---------------------------------------------------------------------------------------------------
+                   State |                     New Encoding |                Previous Encoding 
+---------------------------------------------------------------------------------------------------
+                  idle_d |                              000 |                             0000
+                 write_d |                              001 |                             0010
+                  read_d |                              010 |                             0001
+                wait_1_d |                              011 |                             0011
+                wait_2_d |                              100 |                             0100
+              rec_data_d |                              101 |                             0101
+               wait_cs_d |                              110 |                             0110
+---------------------------------------------------------------------------------------------------
+INFO: [Synth 8-3354] encoded FSM with state register 'localbus_state_reg' using encoding 'sequential' in module 'winnertree'
+---------------------------------------------------------------------------------------------------
+                   State |                     New Encoding |                Previous Encoding 
+---------------------------------------------------------------------------------------------------
+                  idle_s |                              000 |                             0000
+              pharse_1_s |                              001 |                             0001
+              pharse_2_s |                              010 |                             0010
+              pharse_3_s |                              011 |                             0011
+              pharse_4_s |                              100 |                             0100
+                wait_1_s |                              101 |                             0101
+                wait_2_s |                              110 |                             0110
+                  read_s |                              111 |                             0111
+---------------------------------------------------------------------------------------------------
+INFO: [Synth 8-3354] encoded FSM with state register 'lookup_state_reg' using encoding 'sequential' in module 'winnertree__parameterized0'
+---------------------------------------------------------------------------------------------------
+                   State |                     New Encoding |                Previous Encoding 
+---------------------------------------------------------------------------------------------------
+                  idle_d |                              000 |                             0000
+                 write_d |                              001 |                             0010
+                  read_d |                              010 |                             0001
+                wait_1_d |                              011 |                             0011
+                wait_2_d |                              100 |                             0100
+              rec_data_d |                              101 |                             0101
+               wait_cs_d |                              110 |                             0110
+---------------------------------------------------------------------------------------------------
+INFO: [Synth 8-3354] encoded FSM with state register 'localbus_state_reg' using encoding 'sequential' in module 'winnertree__parameterized0'
+---------------------------------------------------------------------------------------------------
+                   State |                     New Encoding |                Previous Encoding 
+---------------------------------------------------------------------------------------------------
+                  idle_s |                              000 |                             0000
+              pharse_1_s |                              001 |                             0001
+              pharse_2_s |                              010 |                             0010
+              pharse_3_s |                              011 |                             0011
+              pharse_4_s |                              100 |                             0100
+                wait_1_s |                              101 |                             0101
+                wait_2_s |                              110 |                             0110
+                  read_s |                              111 |                             0111
+---------------------------------------------------------------------------------------------------
+INFO: [Synth 8-3354] encoded FSM with state register 'lookup_state_reg' using encoding 'sequential' in module 'winnertree__parameterized1'
+---------------------------------------------------------------------------------------------------
+                   State |                     New Encoding |                Previous Encoding 
+---------------------------------------------------------------------------------------------------
+                  idle_d |                              000 |                             0000
+                 write_d |                              001 |                             0010
+                  read_d |                              010 |                             0001
+                wait_1_d |                              011 |                             0011
+                wait_2_d |                              100 |                             0100
+              rec_data_d |                              101 |                             0101
+               wait_cs_d |                              110 |                             0110
+---------------------------------------------------------------------------------------------------
+INFO: [Synth 8-3354] encoded FSM with state register 'localbus_state_reg' using encoding 'sequential' in module 'winnertree__parameterized1'
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:27 ; elapsed = 00:00:30 . Memory (MB): peak = 1021.805 ; gain = 675.344
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start RTL Component Statistics 
+---------------------------------------------------------------------------------
+Detailed RTL Component Info : 
++---Adders : 
+	   3 Input     33 Bit       Adders := 3     
+	   3 Input     32 Bit       Adders := 3     
+	   2 Input     32 Bit       Adders := 12    
+	   2 Input      4 Bit       Adders := 12    
+	   3 Input      4 Bit       Adders := 6     
+	   2 Input      3 Bit       Adders := 12    
++---XORs : 
+	   4 Input     32 Bit         XORs := 1     
++---Registers : 
+	              224 Bit    Registers := 25    
+	              192 Bit    Registers := 30    
+	               14 Bit    Registers := 2     
+	               13 Bit    Registers := 2     
+	               12 Bit    Registers := 2     
+	               11 Bit    Registers := 2     
+	               10 Bit    Registers := 2     
+	                9 Bit    Registers := 2     
+	                5 Bit    Registers := 12    
+	                3 Bit    Registers := 6     
+	                1 Bit    Registers := 49    
++---Muxes : 
+	   2 Input    224 Bit        Muxes := 4     
+	   8 Input    224 Bit        Muxes := 12    
+	   2 Input    192 Bit        Muxes := 18    
+	   8 Input    192 Bit        Muxes := 6     
+	   7 Input    192 Bit        Muxes := 6     
+	   7 Input     14 Bit        Muxes := 1     
+	   7 Input     13 Bit        Muxes := 1     
+	   7 Input     12 Bit        Muxes := 1     
+	   7 Input     11 Bit        Muxes := 1     
+	   7 Input     10 Bit        Muxes := 1     
+	   7 Input      9 Bit        Muxes := 1     
+	   2 Input      5 Bit        Muxes := 36    
+	   8 Input      3 Bit        Muxes := 12    
+	   2 Input      3 Bit        Muxes := 54    
+	   7 Input      3 Bit        Muxes := 6     
+	   2 Input      1 Bit        Muxes := 18    
+	   8 Input      1 Bit        Muxes := 63    
+	   7 Input      1 Bit        Muxes := 54    
+---------------------------------------------------------------------------------
+Finished RTL Component Statistics 
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start RTL Hierarchical Component Statistics 
+---------------------------------------------------------------------------------
+Hierarchical RTL Component report 
+Module half32_128bit 
+Detailed RTL Component Info : 
++---XORs : 
+	   4 Input     32 Bit         XORs := 1     
++---Registers : 
+	              224 Bit    Registers := 1     
+	                1 Bit    Registers := 1     
++---Muxes : 
+	   2 Input    224 Bit        Muxes := 1     
+Module SYNCFIFO 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input      4 Bit       Adders := 2     
+	   3 Input      4 Bit       Adders := 1     
++---Registers : 
+	                5 Bit    Registers := 2     
+	                1 Bit    Registers := 1     
++---Muxes : 
+	   2 Input      5 Bit        Muxes := 6     
+Module ASYNCRAM 
+Detailed RTL Component Info : 
++---Registers : 
+	              192 Bit    Registers := 2     
+Module Dleft 
+Detailed RTL Component Info : 
++---Adders : 
+	   3 Input     32 Bit       Adders := 1     
+	   2 Input     32 Bit       Adders := 1     
+	   2 Input      3 Bit       Adders := 2     
++---Registers : 
+	              224 Bit    Registers := 4     
+	              192 Bit    Registers := 3     
+	               14 Bit    Registers := 2     
+	                3 Bit    Registers := 1     
+	                1 Bit    Registers := 7     
++---Muxes : 
+	   8 Input    224 Bit        Muxes := 2     
+	   2 Input    192 Bit        Muxes := 3     
+	   8 Input    192 Bit        Muxes := 1     
+	   7 Input    192 Bit        Muxes := 1     
+	   7 Input     14 Bit        Muxes := 1     
+	   8 Input      3 Bit        Muxes := 2     
+	   2 Input      3 Bit        Muxes := 9     
+	   7 Input      3 Bit        Muxes := 1     
+	   2 Input      1 Bit        Muxes := 3     
+	   8 Input      1 Bit        Muxes := 10    
+	   7 Input      1 Bit        Muxes := 9     
+Module ASYNCRAM__parameterized0 
+Detailed RTL Component Info : 
++---Registers : 
+	              192 Bit    Registers := 2     
+Module Dleft__parameterized0 
+Detailed RTL Component Info : 
++---Adders : 
+	   3 Input     32 Bit       Adders := 1     
+	   2 Input     32 Bit       Adders := 1     
+	   2 Input      3 Bit       Adders := 2     
++---Registers : 
+	              224 Bit    Registers := 4     
+	              192 Bit    Registers := 3     
+	               13 Bit    Registers := 2     
+	                3 Bit    Registers := 1     
+	                1 Bit    Registers := 7     
++---Muxes : 
+	   8 Input    224 Bit        Muxes := 2     
+	   2 Input    192 Bit        Muxes := 3     
+	   8 Input    192 Bit        Muxes := 1     
+	   7 Input    192 Bit        Muxes := 1     
+	   7 Input     13 Bit        Muxes := 1     
+	   8 Input      3 Bit        Muxes := 2     
+	   2 Input      3 Bit        Muxes := 9     
+	   7 Input      3 Bit        Muxes := 1     
+	   2 Input      1 Bit        Muxes := 3     
+	   8 Input      1 Bit        Muxes := 10    
+	   7 Input      1 Bit        Muxes := 9     
+Module ASYNCRAM__parameterized1 
+Detailed RTL Component Info : 
++---Registers : 
+	              192 Bit    Registers := 2     
+Module Dleft__parameterized1 
+Detailed RTL Component Info : 
++---Adders : 
+	   3 Input     32 Bit       Adders := 1     
+	   2 Input     32 Bit       Adders := 1     
+	   2 Input      3 Bit       Adders := 2     
++---Registers : 
+	              224 Bit    Registers := 4     
+	              192 Bit    Registers := 3     
+	               12 Bit    Registers := 2     
+	                3 Bit    Registers := 1     
+	                1 Bit    Registers := 7     
++---Muxes : 
+	   8 Input    224 Bit        Muxes := 2     
+	   2 Input    192 Bit        Muxes := 3     
+	   8 Input    192 Bit        Muxes := 1     
+	   7 Input    192 Bit        Muxes := 1     
+	   7 Input     12 Bit        Muxes := 1     
+	   8 Input      3 Bit        Muxes := 2     
+	   2 Input      3 Bit        Muxes := 9     
+	   7 Input      3 Bit        Muxes := 1     
+	   2 Input      1 Bit        Muxes := 3     
+	   8 Input      1 Bit        Muxes := 10    
+	   7 Input      1 Bit        Muxes := 9     
+Module ASYNCRAM__parameterized2 
+Detailed RTL Component Info : 
++---Registers : 
+	              192 Bit    Registers := 2     
+Module winnertree 
+Detailed RTL Component Info : 
++---Adders : 
+	   3 Input     33 Bit       Adders := 1     
+	   2 Input     32 Bit       Adders := 3     
+	   2 Input      3 Bit       Adders := 2     
++---Registers : 
+	              224 Bit    Registers := 4     
+	              192 Bit    Registers := 3     
+	               11 Bit    Registers := 2     
+	                3 Bit    Registers := 1     
+	                1 Bit    Registers := 7     
++---Muxes : 
+	   2 Input    224 Bit        Muxes := 1     
+	   8 Input    224 Bit        Muxes := 2     
+	   2 Input    192 Bit        Muxes := 3     
+	   8 Input    192 Bit        Muxes := 1     
+	   7 Input    192 Bit        Muxes := 1     
+	   7 Input     11 Bit        Muxes := 1     
+	   8 Input      3 Bit        Muxes := 2     
+	   2 Input      3 Bit        Muxes := 9     
+	   7 Input      3 Bit        Muxes := 1     
+	   2 Input      1 Bit        Muxes := 3     
+	   8 Input      1 Bit        Muxes := 11    
+	   7 Input      1 Bit        Muxes := 9     
+Module ASYNCRAM__parameterized3 
+Detailed RTL Component Info : 
++---Registers : 
+	              192 Bit    Registers := 2     
+Module winnertree__parameterized0 
+Detailed RTL Component Info : 
++---Adders : 
+	   3 Input     33 Bit       Adders := 1     
+	   2 Input     32 Bit       Adders := 3     
+	   2 Input      3 Bit       Adders := 2     
++---Registers : 
+	              224 Bit    Registers := 4     
+	              192 Bit    Registers := 3     
+	               10 Bit    Registers := 2     
+	                3 Bit    Registers := 1     
+	                1 Bit    Registers := 7     
++---Muxes : 
+	   2 Input    224 Bit        Muxes := 1     
+	   8 Input    224 Bit        Muxes := 2     
+	   2 Input    192 Bit        Muxes := 3     
+	   8 Input    192 Bit        Muxes := 1     
+	   7 Input    192 Bit        Muxes := 1     
+	   7 Input     10 Bit        Muxes := 1     
+	   8 Input      3 Bit        Muxes := 2     
+	   2 Input      3 Bit        Muxes := 9     
+	   7 Input      3 Bit        Muxes := 1     
+	   2 Input      1 Bit        Muxes := 3     
+	   8 Input      1 Bit        Muxes := 11    
+	   7 Input      1 Bit        Muxes := 9     
+Module ASYNCRAM__parameterized4 
+Detailed RTL Component Info : 
++---Registers : 
+	              192 Bit    Registers := 2     
+Module winnertree__parameterized1 
+Detailed RTL Component Info : 
++---Adders : 
+	   3 Input     33 Bit       Adders := 1     
+	   2 Input     32 Bit       Adders := 3     
+	   2 Input      3 Bit       Adders := 2     
++---Registers : 
+	              224 Bit    Registers := 4     
+	              192 Bit    Registers := 3     
+	                9 Bit    Registers := 2     
+	                3 Bit    Registers := 1     
+	                1 Bit    Registers := 7     
++---Muxes : 
+	   2 Input    224 Bit        Muxes := 1     
+	   8 Input    224 Bit        Muxes := 2     
+	   2 Input    192 Bit        Muxes := 3     
+	   8 Input    192 Bit        Muxes := 1     
+	   7 Input    192 Bit        Muxes := 1     
+	   7 Input      9 Bit        Muxes := 1     
+	   8 Input      3 Bit        Muxes := 2     
+	   2 Input      3 Bit        Muxes := 9     
+	   7 Input      3 Bit        Muxes := 1     
+	   2 Input      1 Bit        Muxes := 3     
+	   8 Input      1 Bit        Muxes := 11    
+	   7 Input      1 Bit        Muxes := 9     
+---------------------------------------------------------------------------------
+Finished RTL Hierarchical Component Statistics
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Part Resource Summary
+---------------------------------------------------------------------------------
+Part Resources:
+DSPs: 2020 (col length:140)
+BRAMs: 1510 (col length: RAMB18 140 RAMB36 70)
+---------------------------------------------------------------------------------
+Finished Part Resource Summary
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Cross Boundary and Area Optimization
+---------------------------------------------------------------------------------
+Warning: Parallel synthesis criteria is not met 
+WARNING: [Synth 8-3331] design fifo_top has unconnected port rdclk
+INFO: [Synth 8-3886] merging instance 'winnertree1/ram_data_b_reg[0]' (FDCE) to 'winnertree1/ram_data_b_reg[1]'
+INFO: [Synth 8-3886] merging instance 'winnertree1/ram_data_b_reg[1]' (FDCE) to 'winnertree1/ram_data_b_reg[2]'
+INFO: [Synth 8-3886] merging instance 'winnertree1/ram_data_b_reg[2]' (FDCE) to 'winnertree1/ram_data_b_reg[3]'
+INFO: [Synth 8-3886] merging instance 'winnertree1/ram_data_b_reg[3]' (FDCE) to 'winnertree1/ram_data_b_reg[4]'
+INFO: [Synth 8-3886] merging instance 'winnertree1/ram_data_b_reg[4]' (FDCE) to 'winnertree1/ram_data_b_reg[5]'
+INFO: [Synth 8-3886] merging instance 'winnertree1/ram_data_b_reg[5]' (FDCE) to 'winnertree1/ram_data_b_reg[6]'
+INFO: [Synth 8-3886] merging instance 'winnertree1/ram_data_b_reg[6]' (FDCE) to 'winnertree1/ram_data_b_reg[7]'
+INFO: [Synth 8-3886] merging instance 'winnertree1/ram_data_b_reg[7]' (FDCE) to 'winnertree1/ram_data_b_reg[8]'
+INFO: [Synth 8-3886] merging instance 'winnertree1/ram_data_b_reg[8]' (FDCE) to 'winnertree1/ram_data_b_reg[9]'
+INFO: [Synth 8-3886] merging instance 'winnertree1/ram_data_b_reg[9]' (FDCE) to 'winnertree1/ram_data_b_reg[10]'
+INFO: [Synth 8-3886] merging instance 'winnertree1/ram_data_b_reg[10]' (FDCE) to 'winnertree1/ram_data_b_reg[11]'
+INFO: [Synth 8-3886] merging instance 'winnertree1/ram_data_b_reg[11]' (FDCE) to 'winnertree1/ram_data_b_reg[12]'
+INFO: [Synth 8-3886] merging instance 'winnertree1/ram_data_b_reg[12]' (FDCE) to 'winnertree1/ram_data_b_reg[13]'
+INFO: [Synth 8-3886] merging instance 'winnertree1/ram_data_b_reg[13]' (FDCE) to 'winnertree1/ram_data_b_reg[14]'
+INFO: [Synth 8-3886] merging instance 'winnertree1/ram_data_b_reg[14]' (FDCE) to 'winnertree1/ram_data_b_reg[15]'
+INFO: [Synth 8-3886] merging instance 'winnertree1/ram_data_b_reg[15]' (FDCE) to 'winnertree1/ram_data_b_reg[16]'
+INFO: [Synth 8-3886] merging instance 'winnertree1/ram_data_b_reg[16]' (FDCE) to 'winnertree1/ram_data_b_reg[17]'
+INFO: [Synth 8-3886] merging instance 'winnertree1/ram_data_b_reg[17]' (FDCE) to 'winnertree1/ram_data_b_reg[18]'
+INFO: [Synth 8-3886] merging instance 'winnertree1/ram_data_b_reg[18]' (FDCE) to 'winnertree1/ram_data_b_reg[19]'
+INFO: [Synth 8-3886] merging instance 'winnertree1/ram_data_b_reg[19]' (FDCE) to 'winnertree1/ram_data_b_reg[20]'
+INFO: [Synth 8-3886] merging instance 'winnertree1/ram_data_b_reg[20]' (FDCE) to 'winnertree1/ram_data_b_reg[21]'
+INFO: [Synth 8-3886] merging instance 'winnertree1/ram_data_b_reg[21]' (FDCE) to 'winnertree1/ram_data_b_reg[22]'
+INFO: [Synth 8-3886] merging instance 'winnertree1/ram_data_b_reg[22]' (FDCE) to 'winnertree1/ram_data_b_reg[23]'
+INFO: [Synth 8-3886] merging instance 'winnertree1/ram_data_b_reg[23]' (FDCE) to 'winnertree1/ram_data_b_reg[24]'
+INFO: [Synth 8-3886] merging instance 'winnertree1/ram_data_b_reg[24]' (FDCE) to 'winnertree1/ram_data_b_reg[25]'
+INFO: [Synth 8-3886] merging instance 'winnertree1/ram_data_b_reg[25]' (FDCE) to 'winnertree1/ram_data_b_reg[26]'
+INFO: [Synth 8-3886] merging instance 'winnertree1/ram_data_b_reg[26]' (FDCE) to 'winnertree1/ram_data_b_reg[27]'
+INFO: [Synth 8-3886] merging instance 'winnertree1/ram_data_b_reg[27]' (FDCE) to 'winnertree1/ram_data_b_reg[28]'
+INFO: [Synth 8-3886] merging instance 'winnertree1/ram_data_b_reg[28]' (FDCE) to 'winnertree1/ram_data_b_reg[29]'
+INFO: [Synth 8-3886] merging instance 'winnertree1/ram_data_b_reg[29]' (FDCE) to 'winnertree1/ram_data_b_reg[30]'
+INFO: [Synth 8-3886] merging instance 'winnertree1/ram_data_b_reg[30]' (FDCE) to 'winnertree1/ram_data_b_reg[31]'
+INFO: [Synth 8-3886] merging instance 'winnertree1/ram_data_b_reg[31]' (FDCE) to 'winnertree1/ram_data_b_reg[32]'
+INFO: [Synth 8-3886] merging instance 'winnertree1/ram_data_b_reg[32]' (FDCE) to 'winnertree1/ram_data_b_reg[33]'
+INFO: [Synth 8-3886] merging instance 'winnertree1/ram_data_b_reg[33]' (FDCE) to 'winnertree1/ram_data_b_reg[34]'
+INFO: [Synth 8-3886] merging instance 'winnertree1/ram_data_b_reg[34]' (FDCE) to 'winnertree1/ram_data_b_reg[35]'
+INFO: [Synth 8-3886] merging instance 'winnertree1/ram_data_b_reg[35]' (FDCE) to 'winnertree1/ram_data_b_reg[36]'
+INFO: [Synth 8-3886] merging instance 'winnertree1/ram_data_b_reg[36]' (FDCE) to 'winnertree1/ram_data_b_reg[37]'
+INFO: [Synth 8-3886] merging instance 'winnertree1/ram_data_b_reg[37]' (FDCE) to 'winnertree1/ram_data_b_reg[38]'
+INFO: [Synth 8-3886] merging instance 'winnertree1/ram_data_b_reg[38]' (FDCE) to 'winnertree1/ram_data_b_reg[39]'
+INFO: [Synth 8-3886] merging instance 'winnertree1/ram_data_b_reg[39]' (FDCE) to 'winnertree1/ram_data_b_reg[40]'
+INFO: [Synth 8-3886] merging instance 'winnertree1/ram_data_b_reg[40]' (FDCE) to 'winnertree1/ram_data_b_reg[41]'
+INFO: [Synth 8-3886] merging instance 'winnertree1/ram_data_b_reg[41]' (FDCE) to 'winnertree1/ram_data_b_reg[42]'
+INFO: [Synth 8-3886] merging instance 'winnertree1/ram_data_b_reg[42]' (FDCE) to 'winnertree1/ram_data_b_reg[43]'
+INFO: [Synth 8-3886] merging instance 'winnertree1/ram_data_b_reg[43]' (FDCE) to 'winnertree1/ram_data_b_reg[44]'
+INFO: [Synth 8-3886] merging instance 'winnertree1/ram_data_b_reg[44]' (FDCE) to 'winnertree1/ram_data_b_reg[45]'
+INFO: [Synth 8-3886] merging instance 'winnertree1/ram_data_b_reg[45]' (FDCE) to 'winnertree1/ram_data_b_reg[46]'
+INFO: [Synth 8-3886] merging instance 'winnertree1/ram_data_b_reg[46]' (FDCE) to 'winnertree1/ram_data_b_reg[47]'
+INFO: [Synth 8-3886] merging instance 'winnertree1/ram_data_b_reg[47]' (FDCE) to 'winnertree1/ram_data_b_reg[48]'
+INFO: [Synth 8-3886] merging instance 'winnertree1/ram_data_b_reg[48]' (FDCE) to 'winnertree1/ram_data_b_reg[49]'
+INFO: [Synth 8-3886] merging instance 'winnertree1/ram_data_b_reg[49]' (FDCE) to 'winnertree1/ram_data_b_reg[50]'
+INFO: [Synth 8-3886] merging instance 'winnertree1/ram_data_b_reg[50]' (FDCE) to 'winnertree1/ram_data_b_reg[51]'
+INFO: [Synth 8-3886] merging instance 'winnertree1/ram_data_b_reg[51]' (FDCE) to 'winnertree1/ram_data_b_reg[52]'
+INFO: [Synth 8-3886] merging instance 'winnertree1/ram_data_b_reg[52]' (FDCE) to 'winnertree1/ram_data_b_reg[53]'
+INFO: [Synth 8-3886] merging instance 'winnertree1/ram_data_b_reg[53]' (FDCE) to 'winnertree1/ram_data_b_reg[54]'
+INFO: [Synth 8-3886] merging instance 'winnertree1/ram_data_b_reg[54]' (FDCE) to 'winnertree1/ram_data_b_reg[55]'
+INFO: [Synth 8-3886] merging instance 'winnertree1/ram_data_b_reg[55]' (FDCE) to 'winnertree1/ram_data_b_reg[56]'
+INFO: [Synth 8-3886] merging instance 'winnertree1/ram_data_b_reg[56]' (FDCE) to 'winnertree1/ram_data_b_reg[57]'
+INFO: [Synth 8-3886] merging instance 'winnertree1/ram_data_b_reg[57]' (FDCE) to 'winnertree1/ram_data_b_reg[58]'
+INFO: [Synth 8-3886] merging instance 'winnertree1/ram_data_b_reg[58]' (FDCE) to 'winnertree1/ram_data_b_reg[59]'
+INFO: [Synth 8-3886] merging instance 'winnertree1/ram_data_b_reg[59]' (FDCE) to 'winnertree1/ram_data_b_reg[60]'
+INFO: [Synth 8-3886] merging instance 'winnertree1/ram_data_b_reg[60]' (FDCE) to 'winnertree1/ram_data_b_reg[61]'
+INFO: [Synth 8-3886] merging instance 'winnertree1/ram_data_b_reg[61]' (FDCE) to 'winnertree1/ram_data_b_reg[62]'
+INFO: [Synth 8-3886] merging instance 'winnertree1/ram_data_b_reg[62]' (FDCE) to 'winnertree1/ram_data_b_reg[63]'
+INFO: [Synth 8-3886] merging instance 'winnertree1/ram_data_b_reg[63]' (FDCE) to 'winnertree1/ram_data_b_reg[64]'
+INFO: [Synth 8-3886] merging instance 'winnertree1/ram_data_b_reg[64]' (FDCE) to 'winnertree1/ram_data_b_reg[65]'
+INFO: [Synth 8-3886] merging instance 'winnertree1/ram_data_b_reg[65]' (FDCE) to 'winnertree1/ram_data_b_reg[66]'
+INFO: [Synth 8-3886] merging instance 'winnertree1/ram_data_b_reg[66]' (FDCE) to 'winnertree1/ram_data_b_reg[67]'
+INFO: [Synth 8-3886] merging instance 'winnertree1/ram_data_b_reg[67]' (FDCE) to 'winnertree1/ram_data_b_reg[68]'
+INFO: [Synth 8-3886] merging instance 'winnertree1/ram_data_b_reg[68]' (FDCE) to 'winnertree1/ram_data_b_reg[69]'
+INFO: [Synth 8-3886] merging instance 'winnertree1/ram_data_b_reg[69]' (FDCE) to 'winnertree1/ram_data_b_reg[70]'
+INFO: [Synth 8-3886] merging instance 'winnertree1/ram_data_b_reg[70]' (FDCE) to 'winnertree1/ram_data_b_reg[71]'
+INFO: [Synth 8-3886] merging instance 'winnertree1/ram_data_b_reg[71]' (FDCE) to 'winnertree1/ram_data_b_reg[72]'
+INFO: [Synth 8-3886] merging instance 'winnertree1/ram_data_b_reg[72]' (FDCE) to 'winnertree1/ram_data_b_reg[73]'
+INFO: [Synth 8-3886] merging instance 'winnertree1/ram_data_b_reg[73]' (FDCE) to 'winnertree1/ram_data_b_reg[74]'
+INFO: [Synth 8-3886] merging instance 'winnertree1/ram_data_b_reg[74]' (FDCE) to 'winnertree1/ram_data_b_reg[75]'
+INFO: [Synth 8-3886] merging instance 'winnertree1/ram_data_b_reg[75]' (FDCE) to 'winnertree1/ram_data_b_reg[76]'
+INFO: [Synth 8-3886] merging instance 'winnertree1/ram_data_b_reg[76]' (FDCE) to 'winnertree1/ram_data_b_reg[77]'
+INFO: [Synth 8-3886] merging instance 'winnertree1/ram_data_b_reg[77]' (FDCE) to 'winnertree1/ram_data_b_reg[78]'
+INFO: [Synth 8-3886] merging instance 'winnertree1/ram_data_b_reg[78]' (FDCE) to 'winnertree1/ram_data_b_reg[79]'
+INFO: [Synth 8-3886] merging instance 'winnertree1/ram_data_b_reg[79]' (FDCE) to 'winnertree1/ram_data_b_reg[80]'
+INFO: [Synth 8-3886] merging instance 'winnertree1/ram_data_b_reg[80]' (FDCE) to 'winnertree1/ram_data_b_reg[81]'
+INFO: [Synth 8-3886] merging instance 'winnertree1/ram_data_b_reg[81]' (FDCE) to 'winnertree1/ram_data_b_reg[82]'
+INFO: [Synth 8-3886] merging instance 'winnertree1/ram_data_b_reg[82]' (FDCE) to 'winnertree1/ram_data_b_reg[83]'
+INFO: [Synth 8-3886] merging instance 'winnertree1/ram_data_b_reg[83]' (FDCE) to 'winnertree1/ram_data_b_reg[84]'
+INFO: [Synth 8-3886] merging instance 'winnertree1/ram_data_b_reg[84]' (FDCE) to 'winnertree1/ram_data_b_reg[85]'
+INFO: [Synth 8-3886] merging instance 'winnertree1/ram_data_b_reg[85]' (FDCE) to 'winnertree1/ram_data_b_reg[86]'
+INFO: [Synth 8-3886] merging instance 'winnertree1/ram_data_b_reg[86]' (FDCE) to 'winnertree1/ram_data_b_reg[87]'
+INFO: [Synth 8-3886] merging instance 'winnertree1/ram_data_b_reg[87]' (FDCE) to 'winnertree1/ram_data_b_reg[88]'
+INFO: [Synth 8-3886] merging instance 'winnertree1/ram_data_b_reg[88]' (FDCE) to 'winnertree1/ram_data_b_reg[89]'
+INFO: [Synth 8-3886] merging instance 'winnertree1/ram_data_b_reg[89]' (FDCE) to 'winnertree1/ram_data_b_reg[90]'
+INFO: [Synth 8-3886] merging instance 'winnertree1/ram_data_b_reg[90]' (FDCE) to 'winnertree1/ram_data_b_reg[91]'
+INFO: [Synth 8-3886] merging instance 'winnertree1/ram_data_b_reg[91]' (FDCE) to 'winnertree1/ram_data_b_reg[92]'
+INFO: [Synth 8-3886] merging instance 'winnertree1/ram_data_b_reg[92]' (FDCE) to 'winnertree1/ram_data_b_reg[93]'
+INFO: [Synth 8-3886] merging instance 'winnertree1/ram_data_b_reg[93]' (FDCE) to 'winnertree1/ram_data_b_reg[94]'
+INFO: [Synth 8-3886] merging instance 'winnertree1/ram_data_b_reg[94]' (FDCE) to 'winnertree1/ram_data_b_reg[95]'
+INFO: [Synth 8-3886] merging instance 'winnertree1/ram_data_b_reg[95]' (FDCE) to 'winnertree1/ram_data_b_reg[96]'
+INFO: [Synth 8-3886] merging instance 'winnertree1/ram_data_b_reg[96]' (FDCE) to 'winnertree1/ram_data_b_reg[97]'
+INFO: [Synth 8-3886] merging instance 'winnertree1/ram_data_b_reg[97]' (FDCE) to 'winnertree1/ram_data_b_reg[98]'
+INFO: [Synth 8-3886] merging instance 'winnertree1/ram_data_b_reg[98]' (FDCE) to 'winnertree1/ram_data_b_reg[99]'
+INFO: [Synth 8-3886] merging instance 'winnertree1/ram_data_b_reg[99]' (FDCE) to 'winnertree1/ram_data_b_reg[100]'
+INFO: [Common 17-14] Message 'Synth 8-3886' appears 100 times and further instances of the messages will be disabled. Use the Tcl command set_msg_config to change the current settings.
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (winnertree1/\ram_data_b_reg[191] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (winnertree1/\ram_addr_b_reg[9] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (winnertree0/\ram_data_b_reg[191] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (winnertree0/\ram_addr_b_reg[10] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (delft2/\ram_data_b_reg[191] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (delft2/\ram_addr_b_reg[11] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (delft1/\ram_data_b_reg[191] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (delft1/\ram_addr_b_reg[12] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (delft0/\ram_data_b_reg[191] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (delft0/\ram_addr_b_reg[13] )
+WARNING: [Synth 8-3332] Sequential element (hash_2/q_b_reg[191]) is unused and will be removed from module Dleft.
+WARNING: [Synth 8-3332] Sequential element (hash_2/q_b_reg[190]) is unused and will be removed from module Dleft.
+WARNING: [Synth 8-3332] Sequential element (hash_2/q_b_reg[189]) is unused and will be removed from module Dleft.
+WARNING: [Synth 8-3332] Sequential element (hash_2/q_b_reg[188]) is unused and will be removed from module Dleft.
+WARNING: [Synth 8-3332] Sequential element (hash_2/q_b_reg[187]) is unused and will be removed from module Dleft.
+WARNING: [Synth 8-3332] Sequential element (hash_2/q_b_reg[186]) is unused and will be removed from module Dleft.
+WARNING: [Synth 8-3332] Sequential element (hash_2/q_b_reg[185]) is unused and will be removed from module Dleft.
+WARNING: [Synth 8-3332] Sequential element (hash_2/q_b_reg[184]) is unused and will be removed from module Dleft.
+WARNING: [Synth 8-3332] Sequential element (hash_2/q_b_reg[183]) is unused and will be removed from module Dleft.
+WARNING: [Synth 8-3332] Sequential element (hash_2/q_b_reg[182]) is unused and will be removed from module Dleft.
+WARNING: [Synth 8-3332] Sequential element (hash_2/q_b_reg[181]) is unused and will be removed from module Dleft.
+WARNING: [Synth 8-3332] Sequential element (hash_2/q_b_reg[180]) is unused and will be removed from module Dleft.
+WARNING: [Synth 8-3332] Sequential element (hash_2/q_b_reg[179]) is unused and will be removed from module Dleft.
+WARNING: [Synth 8-3332] Sequential element (hash_2/q_b_reg[178]) is unused and will be removed from module Dleft.
+WARNING: [Synth 8-3332] Sequential element (hash_2/q_b_reg[177]) is unused and will be removed from module Dleft.
+WARNING: [Synth 8-3332] Sequential element (hash_2/q_b_reg[176]) is unused and will be removed from module Dleft.
+WARNING: [Synth 8-3332] Sequential element (hash_2/q_b_reg[175]) is unused and will be removed from module Dleft.
+WARNING: [Synth 8-3332] Sequential element (hash_2/q_b_reg[174]) is unused and will be removed from module Dleft.
+WARNING: [Synth 8-3332] Sequential element (hash_2/q_b_reg[173]) is unused and will be removed from module Dleft.
+WARNING: [Synth 8-3332] Sequential element (hash_2/q_b_reg[172]) is unused and will be removed from module Dleft.
+WARNING: [Synth 8-3332] Sequential element (hash_2/q_b_reg[171]) is unused and will be removed from module Dleft.
+WARNING: [Synth 8-3332] Sequential element (hash_2/q_b_reg[170]) is unused and will be removed from module Dleft.
+WARNING: [Synth 8-3332] Sequential element (hash_2/q_b_reg[169]) is unused and will be removed from module Dleft.
+WARNING: [Synth 8-3332] Sequential element (hash_2/q_b_reg[168]) is unused and will be removed from module Dleft.
+WARNING: [Synth 8-3332] Sequential element (hash_2/q_b_reg[167]) is unused and will be removed from module Dleft.
+WARNING: [Synth 8-3332] Sequential element (hash_2/q_b_reg[166]) is unused and will be removed from module Dleft.
+WARNING: [Synth 8-3332] Sequential element (hash_2/q_b_reg[165]) is unused and will be removed from module Dleft.
+WARNING: [Synth 8-3332] Sequential element (hash_2/q_b_reg[164]) is unused and will be removed from module Dleft.
+WARNING: [Synth 8-3332] Sequential element (hash_2/q_b_reg[163]) is unused and will be removed from module Dleft.
+WARNING: [Synth 8-3332] Sequential element (hash_2/q_b_reg[162]) is unused and will be removed from module Dleft.
+WARNING: [Synth 8-3332] Sequential element (hash_2/q_b_reg[161]) is unused and will be removed from module Dleft.
+WARNING: [Synth 8-3332] Sequential element (hash_2/q_b_reg[160]) is unused and will be removed from module Dleft.
+WARNING: [Synth 8-3332] Sequential element (hash_2/q_b_reg[159]) is unused and will be removed from module Dleft.
+WARNING: [Synth 8-3332] Sequential element (hash_2/q_b_reg[158]) is unused and will be removed from module Dleft.
+WARNING: [Synth 8-3332] Sequential element (hash_2/q_b_reg[157]) is unused and will be removed from module Dleft.
+WARNING: [Synth 8-3332] Sequential element (hash_2/q_b_reg[156]) is unused and will be removed from module Dleft.
+WARNING: [Synth 8-3332] Sequential element (hash_2/q_b_reg[155]) is unused and will be removed from module Dleft.
+WARNING: [Synth 8-3332] Sequential element (hash_2/q_b_reg[154]) is unused and will be removed from module Dleft.
+WARNING: [Synth 8-3332] Sequential element (hash_2/q_b_reg[153]) is unused and will be removed from module Dleft.
+WARNING: [Synth 8-3332] Sequential element (hash_2/q_b_reg[152]) is unused and will be removed from module Dleft.
+WARNING: [Synth 8-3332] Sequential element (hash_2/q_b_reg[151]) is unused and will be removed from module Dleft.
+WARNING: [Synth 8-3332] Sequential element (hash_2/q_b_reg[150]) is unused and will be removed from module Dleft.
+WARNING: [Synth 8-3332] Sequential element (hash_2/q_b_reg[149]) is unused and will be removed from module Dleft.
+WARNING: [Synth 8-3332] Sequential element (hash_2/q_b_reg[148]) is unused and will be removed from module Dleft.
+WARNING: [Synth 8-3332] Sequential element (hash_2/q_b_reg[147]) is unused and will be removed from module Dleft.
+WARNING: [Synth 8-3332] Sequential element (hash_2/q_b_reg[146]) is unused and will be removed from module Dleft.
+WARNING: [Synth 8-3332] Sequential element (hash_2/q_b_reg[145]) is unused and will be removed from module Dleft.
+WARNING: [Synth 8-3332] Sequential element (hash_2/q_b_reg[144]) is unused and will be removed from module Dleft.
+WARNING: [Synth 8-3332] Sequential element (hash_2/q_b_reg[143]) is unused and will be removed from module Dleft.
+WARNING: [Synth 8-3332] Sequential element (hash_2/q_b_reg[142]) is unused and will be removed from module Dleft.
+WARNING: [Synth 8-3332] Sequential element (hash_2/q_b_reg[141]) is unused and will be removed from module Dleft.
+WARNING: [Synth 8-3332] Sequential element (hash_2/q_b_reg[140]) is unused and will be removed from module Dleft.
+WARNING: [Synth 8-3332] Sequential element (hash_2/q_b_reg[139]) is unused and will be removed from module Dleft.
+WARNING: [Synth 8-3332] Sequential element (hash_2/q_b_reg[138]) is unused and will be removed from module Dleft.
+WARNING: [Synth 8-3332] Sequential element (hash_2/q_b_reg[137]) is unused and will be removed from module Dleft.
+WARNING: [Synth 8-3332] Sequential element (hash_2/q_b_reg[136]) is unused and will be removed from module Dleft.
+WARNING: [Synth 8-3332] Sequential element (hash_2/q_b_reg[135]) is unused and will be removed from module Dleft.
+WARNING: [Synth 8-3332] Sequential element (hash_2/q_b_reg[134]) is unused and will be removed from module Dleft.
+WARNING: [Synth 8-3332] Sequential element (hash_2/q_b_reg[133]) is unused and will be removed from module Dleft.
+WARNING: [Synth 8-3332] Sequential element (hash_2/q_b_reg[132]) is unused and will be removed from module Dleft.
+WARNING: [Synth 8-3332] Sequential element (hash_2/q_b_reg[131]) is unused and will be removed from module Dleft.
+WARNING: [Synth 8-3332] Sequential element (hash_2/q_b_reg[130]) is unused and will be removed from module Dleft.
+WARNING: [Synth 8-3332] Sequential element (hash_2/q_b_reg[129]) is unused and will be removed from module Dleft.
+WARNING: [Synth 8-3332] Sequential element (hash_2/q_b_reg[128]) is unused and will be removed from module Dleft.
+WARNING: [Synth 8-3332] Sequential element (hash_2/q_b_reg[127]) is unused and will be removed from module Dleft.
+WARNING: [Synth 8-3332] Sequential element (hash_2/q_b_reg[126]) is unused and will be removed from module Dleft.
+WARNING: [Synth 8-3332] Sequential element (hash_2/q_b_reg[125]) is unused and will be removed from module Dleft.
+WARNING: [Synth 8-3332] Sequential element (hash_2/q_b_reg[124]) is unused and will be removed from module Dleft.
+WARNING: [Synth 8-3332] Sequential element (hash_2/q_b_reg[123]) is unused and will be removed from module Dleft.
+WARNING: [Synth 8-3332] Sequential element (hash_2/q_b_reg[122]) is unused and will be removed from module Dleft.
+WARNING: [Synth 8-3332] Sequential element (hash_2/q_b_reg[121]) is unused and will be removed from module Dleft.
+WARNING: [Synth 8-3332] Sequential element (hash_2/q_b_reg[120]) is unused and will be removed from module Dleft.
+WARNING: [Synth 8-3332] Sequential element (hash_2/q_b_reg[119]) is unused and will be removed from module Dleft.
+WARNING: [Synth 8-3332] Sequential element (hash_2/q_b_reg[118]) is unused and will be removed from module Dleft.
+WARNING: [Synth 8-3332] Sequential element (hash_2/q_b_reg[117]) is unused and will be removed from module Dleft.
+WARNING: [Synth 8-3332] Sequential element (hash_2/q_b_reg[116]) is unused and will be removed from module Dleft.
+WARNING: [Synth 8-3332] Sequential element (hash_2/q_b_reg[115]) is unused and will be removed from module Dleft.
+WARNING: [Synth 8-3332] Sequential element (hash_2/q_b_reg[114]) is unused and will be removed from module Dleft.
+WARNING: [Synth 8-3332] Sequential element (hash_2/q_b_reg[113]) is unused and will be removed from module Dleft.
+WARNING: [Synth 8-3332] Sequential element (hash_2/q_b_reg[112]) is unused and will be removed from module Dleft.
+WARNING: [Synth 8-3332] Sequential element (hash_2/q_b_reg[111]) is unused and will be removed from module Dleft.
+WARNING: [Synth 8-3332] Sequential element (hash_2/q_b_reg[110]) is unused and will be removed from module Dleft.
+WARNING: [Synth 8-3332] Sequential element (hash_2/q_b_reg[109]) is unused and will be removed from module Dleft.
+WARNING: [Synth 8-3332] Sequential element (hash_2/q_b_reg[108]) is unused and will be removed from module Dleft.
+WARNING: [Synth 8-3332] Sequential element (hash_2/q_b_reg[107]) is unused and will be removed from module Dleft.
+WARNING: [Synth 8-3332] Sequential element (hash_2/q_b_reg[106]) is unused and will be removed from module Dleft.
+WARNING: [Synth 8-3332] Sequential element (hash_2/q_b_reg[105]) is unused and will be removed from module Dleft.
+WARNING: [Synth 8-3332] Sequential element (hash_2/q_b_reg[104]) is unused and will be removed from module Dleft.
+WARNING: [Synth 8-3332] Sequential element (hash_2/q_b_reg[103]) is unused and will be removed from module Dleft.
+WARNING: [Synth 8-3332] Sequential element (hash_2/q_b_reg[102]) is unused and will be removed from module Dleft.
+WARNING: [Synth 8-3332] Sequential element (hash_2/q_b_reg[101]) is unused and will be removed from module Dleft.
+WARNING: [Synth 8-3332] Sequential element (hash_2/q_b_reg[100]) is unused and will be removed from module Dleft.
+WARNING: [Synth 8-3332] Sequential element (hash_2/q_b_reg[99]) is unused and will be removed from module Dleft.
+WARNING: [Synth 8-3332] Sequential element (hash_2/q_b_reg[98]) is unused and will be removed from module Dleft.
+WARNING: [Synth 8-3332] Sequential element (hash_2/q_b_reg[97]) is unused and will be removed from module Dleft.
+WARNING: [Synth 8-3332] Sequential element (hash_2/q_b_reg[96]) is unused and will be removed from module Dleft.
+WARNING: [Synth 8-3332] Sequential element (hash_2/q_b_reg[95]) is unused and will be removed from module Dleft.
+WARNING: [Synth 8-3332] Sequential element (hash_2/q_b_reg[94]) is unused and will be removed from module Dleft.
+WARNING: [Synth 8-3332] Sequential element (hash_2/q_b_reg[93]) is unused and will be removed from module Dleft.
+WARNING: [Synth 8-3332] Sequential element (hash_2/q_b_reg[92]) is unused and will be removed from module Dleft.
+INFO: [Common 17-14] Message 'Synth 8-3332' appears 100 times and further instances of the messages will be disabled. Use the Tcl command set_msg_config to change the current settings.
+---------------------------------------------------------------------------------
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:59 ; elapsed = 00:01:01 . Memory (MB): peak = 1021.805 ; gain = 675.344
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start Applying XDC Timing Constraints
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:01:09 ; elapsed = 00:01:13 . Memory (MB): peak = 1021.805 ; gain = 675.344
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Timing Optimization
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Timing Optimization : Time (s): cpu = 00:01:14 ; elapsed = 00:01:18 . Memory (MB): peak = 1060.219 ; gain = 713.758
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start Technology Mapping
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Technology Mapping : Time (s): cpu = 00:01:19 ; elapsed = 00:01:24 . Memory (MB): peak = 1087.453 ; gain = 740.992
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished IO Insertion : Time (s): cpu = 00:01:21 ; elapsed = 00:01:25 . Memory (MB): peak = 1087.453 ; gain = 740.992
+---------------------------------------------------------------------------------
+
+Report Check Netlist: 
++------+------------------+-------+---------+-------+------------------+
+|      |Item              |Errors |Warnings |Status |Description       |
++------+------------------+-------+---------+-------+------------------+
+|1     |multi_driven_nets |      0|        0|Passed |Multi driven nets |
++------+------------------+-------+---------+-------+------------------+
+---------------------------------------------------------------------------------
+Start Renaming Generated Instances
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Instances : Time (s): cpu = 00:01:21 ; elapsed = 00:01:26 . Memory (MB): peak = 1087.453 ; gain = 740.992
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start Rebuilding User Hierarchy
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:01:23 ; elapsed = 00:01:27 . Memory (MB): peak = 1087.453 ; gain = 740.992
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Ports
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Ports : Time (s): cpu = 00:01:23 ; elapsed = 00:01:27 . Memory (MB): peak = 1087.453 ; gain = 740.992
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:01:23 ; elapsed = 00:01:28 . Memory (MB): peak = 1087.453 ; gain = 740.992
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Nets
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Nets : Time (s): cpu = 00:01:23 ; elapsed = 00:01:28 . Memory (MB): peak = 1087.453 ; gain = 740.992
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Writing Synthesis Report
+---------------------------------------------------------------------------------
+
+Report BlackBoxes: 
++------+--------------+----------+
+|      |BlackBox name |Instances |
++------+--------------+----------+
+|1     |blk_mem_gen_0 |         6|
+|2     |blk_mem_gen_1 |         6|
++------+--------------+----------+
+
+Report Cell Usage: 
++------+-----------------+------+
+|      |Cell             |Count |
++------+-----------------+------+
+|1     |blk_mem_gen_0    |     1|
+|2     |blk_mem_gen_0__1 |     1|
+|3     |blk_mem_gen_0__2 |     1|
+|4     |blk_mem_gen_0__3 |     1|
+|5     |blk_mem_gen_0__4 |     1|
+|6     |blk_mem_gen_0__5 |     1|
+|7     |blk_mem_gen_1    |     1|
+|8     |blk_mem_gen_1__1 |     1|
+|9     |blk_mem_gen_1__2 |     1|
+|10    |blk_mem_gen_1__3 |     1|
+|11    |blk_mem_gen_1__4 |     1|
+|12    |blk_mem_gen_1__5 |     1|
+|13    |BUFG             |     2|
+|14    |CARRY4           |   309|
+|15    |LUT1             |    16|
+|16    |LUT2             |  1339|
+|17    |LUT3             |   452|
+|18    |LUT4             |  1823|
+|19    |LUT5             |   284|
+|20    |LUT6             |  1299|
+|21    |FDCE             |  7643|
+|22    |FDPE             |   230|
+|23    |LD               |  1321|
+|24    |IBUF             |   195|
+|25    |OBUF             |     1|
++------+-----------------+------+
+
+Report Instance Areas: 
++------+---------------------------+---------------------------+------+
+|      |Instance                   |Module                     |Cells |
++------+---------------------------+---------------------------+------+
+|1     |top                        |                           | 19906|
+|2     |  delft0                   |Dleft                      |  3251|
+|3     |    hash_2                 |ASYNCRAM                   |   578|
+|4     |    scfifo_224_16_pkt_fifo |fifo_top_8                 |   486|
+|5     |      \SYNC.scfifo_inst    |SYNCFIFO_9                 |   486|
+|6     |  delft1                   |Dleft__parameterized0      |  3251|
+|7     |    hash_2                 |ASYNCRAM__parameterized0   |   577|
+|8     |    scfifo_224_16_pkt_fifo |fifo_top_6                 |   488|
+|9     |      \SYNC.scfifo_inst    |SYNCFIFO_7                 |   488|
+|10    |  delft2                   |Dleft__parameterized1      |  3252|
+|11    |    hash_2                 |ASYNCRAM__parameterized1   |   580|
+|12    |    scfifo_224_16_pkt_fifo |fifo_top_4                 |   488|
+|13    |      \SYNC.scfifo_inst    |SYNCFIFO_5                 |   488|
+|14    |  half32_128bit_inst       |half32_128bit              |   449|
+|15    |  winnertree0              |winnertree                 |  3326|
+|16    |    hash_2                 |ASYNCRAM__parameterized2   |   761|
+|17    |    scfifo_224_16_pkt_fifo |fifo_top_2                 |   493|
+|18    |      \SYNC.scfifo_inst    |SYNCFIFO_3                 |   493|
+|19    |  winnertree1              |winnertree__parameterized0 |  3325|
+|20    |    hash_2                 |ASYNCRAM__parameterized3   |   761|
+|21    |    scfifo_224_16_pkt_fifo |fifo_top_0                 |   493|
+|22    |      \SYNC.scfifo_inst    |SYNCFIFO_1                 |   493|
+|23    |  winnertree2              |winnertree__parameterized1 |  2854|
+|24    |    hash_2                 |ASYNCRAM__parameterized4   |   633|
+|25    |    scfifo_224_16_pkt_fifo |fifo_top                   |   439|
+|26    |      \SYNC.scfifo_inst    |SYNCFIFO                   |   439|
++------+---------------------------+---------------------------+------+
+---------------------------------------------------------------------------------
+Finished Writing Synthesis Report : Time (s): cpu = 00:01:23 ; elapsed = 00:01:28 . Memory (MB): peak = 1087.453 ; gain = 740.992
+---------------------------------------------------------------------------------
+Synthesis finished with 0 errors, 0 critical warnings and 2803 warnings.
+Synthesis Optimization Runtime : Time (s): cpu = 00:01:04 ; elapsed = 00:01:14 . Memory (MB): peak = 1087.453 ; gain = 235.219
+Synthesis Optimization Complete : Time (s): cpu = 00:01:23 ; elapsed = 00:01:28 . Memory (MB): peak = 1087.453 ; gain = 740.992
+INFO: [Project 1-571] Translating synthesized netlist
+INFO: [Netlist 29-17] Analyzing 1825 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
+INFO: [Project 1-570] Preparing netlist for logic optimization
+INFO: [Opt 31-138] Pushed 5 inverter(s) to 1120 load pin(s).
+INFO: [Project 1-111] Unisim Transformation Summary:
+  A total of 1321 instances were transformed.
+  LD => LDCE: 201 instances
+  LD => LDCE (inverted pins: G): 1120 instances
+
+INFO: [Common 17-83] Releasing license: Synthesis
+284 Infos, 136 Warnings, 0 Critical Warnings and 0 Errors encountered.
+synth_design completed successfully
+synth_design: Time (s): cpu = 00:01:29 ; elapsed = 00:01:36 . Memory (MB): peak = 1087.453 ; gain = 752.465
+INFO: [Common 17-1381] The checkpoint 'F:/work files/AHeap-vivado/AHeap/AHeap.runs/synth_1/AHeap_top.dcp' has been generated.
+INFO: [runtcl-4] Executing : report_utilization -file AHeap_top_utilization_synth.rpt -pb AHeap_top_utilization_synth.pb
+report_utilization: Time (s): cpu = 00:00:01 ; elapsed = 00:00:00.309 . Memory (MB): peak = 1087.453 ; gain = 0.000
+INFO: [Common 17-206] Exiting Vivado at Mon Jan 21 19:18:07 2019...
