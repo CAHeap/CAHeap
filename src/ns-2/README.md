@@ -1,155 +1,59 @@
-# CAHeap ns-2 project
-***
-## NS-2 Add CAHeap at the Node-Entry
-#### 1)At folder: ns-allinone-2.35/ns-2.35/common
+## Installation
+- Download [Network Simulator (NS) 2.35](https://sourceforge.net/projects/nsnam/files/latest/download)and unzip it.
 
-add ECtreap.h
+  ```
+  $ tar -zxvf ns-allinone-2.35.tar.gz
+  ```
+- Copy [CAHeap.patch](https://github.com/CAHeap/CAHeap/tree/master/src/ns-2/CAHeap.patch) to the *top ns-2.35 folder* (`ns-allinone-2.35`) and apply the patch. Then install NS2
+  ```
+  $ cd ns-allinone-2.35
+  $ patch -p1 --ignore-whitespace -i CAHeap.patch
+  $ ./install
+  ```
+- Install  [Intel(R) Intelligent Storage Acceleration Library](https://github.com/01org/isa-l)
 
-```
-#ifndef ECTREAP_H
-#define ECTREAP_H
+  Add  -lisal` to `ns-allinone-2.35/ns-2.35/Makefile
 
-#include "packet.h"
-#include "ip.h"
-#include "connector.h"
+  ```
+  LIB   = ...
+  		-lsal\
+  ```
 
-class ECtreap : public Connector {
- public:
-	ECtreap();
-	int count = 0;
-	int nid;
-	void recv(Packet* p, Handler*);
-	inline void send(Packet* p, Handler* h) { target_->recv(p, h); }
-	int command(int argc, const char*const* argv);
-};
+- Install [Boost Serialize ](https://www.boost.org/)
 
-#endif
-```
+  Add  Boost Serialize ` to `ns-allinone-2.35/ns-2.35/Makefile
 
-add ECtreap.cc
+  ```
+  INCLUDE= ...
+   		-I YourPath/boost_1_69_0 
+  LIB   = ...
+  		-LYourPath/boost_1_69_0 /stage/lib -lboost_serialization\
+  ```
 
-```
-#include "ECtreap.h"
-#include <stdio.h>
+- Copy files in [common](https://github.com/CAHeap/CAHeap/tree/master/src/ns-2/common) folder to ```ns-allinone-2.35/ns-2.35/common/```.
 
-static class ECtreapClass : public TclClass {
-public:
-	ECtreapClass() : TclClass("Connector/ECtreap") {}
-	TclObject* create(int /* argc */, const char*const* /* argv */) {
-		return (new ECtreap);
-	}
-} class_ECtreap;
-
-ECtreap::ECtreap() {bind("tid_",&nid);}
-
-int ECtreap::command(int argc, const char*const* argv)
-{
-	return Connector::command(argc, argv);
-}
-
-void ECtreap::recv(Packet* p, Handler* h)
-{
-    if(!count)
-	printf("hello ECtreap this is %d\n",nid);
-	count++;
-	/*##################################
-	
-	Flow-Cache
-	
-	##################################*/
-	
-	send(p, h);
-}
-```
-
-#### 2) At Makefile
-
-```
+  Add Common/ECtreap.o` to `ns-allinone-2.35/ns-2.35/Makefile
+    ```
 OBJ_CC =....
 		....
 		common/ECtreap.o\
-```
+    ```
 
-#### 3) ns-allinone-2.35/ns-2.35/tcl/lib/ns-default.tcl
+- Run ```make``` on ```/ns-allinone-2.34/ns-2.34```.
 
-```
-Connector/ECtreap set tid_ 10086
-```
 
-#### 4) ns-node.tcl
+## Simulation
+- In the tcl file [8PodFatTree.tcl](https://github.com/CAHeap/CAHeap/tree/master/src/ns-2/8PodFatTree.tcl) , we build a k=8 fat-tree topology and simulate the Loop/Blackhole. 
 
-Behind
+  ```
+  ns 8PodFatTree.tcl
+  ```
 
-![1547021912457](C:\Users\dkzcx\AppData\Roaming\Typora\typora-user-images\1547021912457.png)
+## Analyze Results
 
-Add
+- In  [common](https://github.com/CAHeap/CAHeap/tree/master/src/ns-2/common) folder, the file  [calres.cc](https://github.com/CAHeap/CAHeap/tree/master/src/ns-2/common/calres.cc) is used to analyze results.
+  ```
+  g++ calres.cc -std=c++11 -LYourPath/boost_1_69_0/stage/lib -	          lboost_serialization -I YourPath/boost_1_69_0 -lisal -O3
+  ./a.out 0
+  ```
 
-```
-Connector/ECtreap set tid_ $id_
-```
-
-Behind
-
-![1547021969428](C:\Users\dkzcx\AppData\Roaming\Typora\typora-user-images\1547021969428.png)
-
-Add
-
-```
-$self insert-entry  "Base" [new Connector/ECtreap] "target"
-```
-
-#### 4) ns-node.tcl
-
-Because EC-Treap is a Connector not a Classifier!!!
-
-```
-Line341: set nxtclsfr_ [$classifier_ target]
-....
-Line362: set mpathClsfr_($id) [new Classifier/MultiPath]
-			if {$routes_($id) > 0} {
-				assert "$routes_($id) == 1"
-				$mpathClsfr_($id) installNext \
-						[$nxtclsfr_ in-slot? $id]
-			}
-			$nxtclsfr_ install $id $mpathClsfr_($id)
-```
-
-## NS-2 & Boost Serialize
-
-#### 1) Download & Install Boost
-
-Google boost
-
-Modify Makefile
-
-```
-INCLUDE= ...
-		-I /home/zcxy/Desktop/boost_1_69_0 
-LIB   = ...
-		-L/home/zcxy/Desktop/boost_1_69_0/stage/lib -lboost_serialization\
-```
-
-#### 2) Add Files & Folder
-
-Common/ALGO
-
-Common/unordered_map_serialization.h
-
-Common/ECtreap.h
-
-Common/ECtreap.cc
-
-#### 3) Add Result Process Files
-
-Add Common/calres.cc & Modify File Path
-
-#### 4) Modify FILE Path
-
-```
-ECtreap.h
-	#define RESULT_PATH "/home/zcxy/Desktop/ECres"
-	#define FLOWCACHE_RES "/home/zcxy/Desktop/ECres/ECtreap"
-	#define TRUE_RES "/home/zcxy/Desktop/ECres/TRUE"
-```
-
-## Encode and Decode

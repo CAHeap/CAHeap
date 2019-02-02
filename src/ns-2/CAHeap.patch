@@ -1,0 +1,171 @@
+diff -uNr ns-2.35-org/classifier/classifier-mpath.cc ns-2.35/classifier/classifier-mpath.cc
+--- ns-2.35-org/classifier/classifier-mpath.cc	2005-08-26 02:58:01.000000000 +0800
++++ ns-2.35/classifier/classifier-mpath.cc	2019-02-02 16:36:43.848198000 +0800
+@@ -53,7 +53,12 @@
+ 
+ class MultiPathForwarder : public Classifier {
+ public:
+-	MultiPathForwarder() : ns_(0) {} 
++	MultiPathForwarder() : ns_(0), nodeid_(0), nodetype_(0), perflow_(0), checkpathid_(0) {
++		bind("nodeid_", &nodeid_);
++		bind("nodetype_", &nodetype_);
++		bind("perflow_", &perflow_);
++		bind("checkpathid_", &checkpathid_);
++	}
+ 	virtual int classify(Packet*) {
+ 		int cl;
+ 		int fail = ns_;
+@@ -74,3 +79,79 @@
+ 		return (new MultiPathForwarder());
+ 	}
+ } class_multipath;
++
++
++
++	virtual int classify(Packet* p) {
++      	int cl;
++		hdr_ip* h = hdr_ip::access(p);
++		if (perflow_ || checkpathid_)
++        {
++	           struct hkey
++            {
++			    int nodeid;
++       			nsaddr_t src, dst;
++                int fid;
++		    };
++		    struct hkey buf_;
++		    buf_.nodeid = nodeid_;
++		    buf_.src = mshift(h->saddr());
++		    buf_.dst = mshift(h->daddr());
++		    buf_.fid = h->flowid();
++            char* bufString = (char*) &buf_;
++            int length = sizeof(hkey);
++
++            unsigned int ms_ = (unsigned int) HashString(bufString, length);
++            if (checkpathid_)
++            {
++                int pathNum = h->prio();
++                int pathDig;
++                for (int i = 0; i < nodetype_; i++)
++                {
++                    pathDig = pathNum % 8;
++                    pathNum /= 8;
++		        }
++                
++		        ms_ += h->prio(); //pathDig;
++		    }
++		    ms_ %= (maxslot_ + 1);
++		    
++		    int fail = ms_;
++		    do {
++			    cl = ms_++;
++                ms_ %= (maxslot_ + 1);
++		    } while (slot_[cl] == 0 && ms_ != fail);
++		  
++		} 
++		else
++        {
++          int fail = ns_;
++          do {
++              cl = ns_++;
++              ns_ %= (maxslot_ + 1);
++          } while (slot_[cl] == 0 && ns_ != fail);
++        }
++ 		return cl;
++ 	}
++ private:
++ 	int ns_;
++	int nodeid_;
++    int nodetype_;
++	int perflow_;
++	int checkpathid_;
++
++	static unsigned int
++	HashString(register const char *bytes,int length)
++	{
++		register unsigned int result;
++		register int i;
++
++		result = 0;
++		for (i = 0;  i < length;  i++) {
++			result += (result<<3) + *bytes++;
++		}
++		return result;
++	}
++ };
++ 
++
+diff -uNr ns-2.35-org/lib/ns-default.tcl ns-2.35/lib/ns-default.tcl
+--- ns-2.35-org/lib/ns-default.tcl	2010-07-04 06:45:45.000000000 +0800
++++ ns-2.35/lib/ns-default.tcl	2019-02-02 16:30:10.728191000 +0800
+@@ -953,7 +953,7 @@
+ 					# to reflect a changing reality.
+ Agent/TCP set maxrto_ 60 ; 		# default changed on 2007/03/28
+ 					#  to reflect RFC2988.
+-Agent/TCP set minrto_ 0.2 ;		# Default changed to 200ms on 
++Agent/TCP set minrto_ 0.002 ;		# Default changed to 200ms on 
+ 					#  2004/10/14, to match values
+ 					#  used by many implementations.
+ Agent/TCP set srtt_init_ 0
+@@ -1590,3 +1590,10 @@
+ 
+ Agent/MDART set macFailed_ true
+ Agent/MDART set etxMetric_ true
++
++#CAHeap
++Classifier/MultiPath set nodeid_ 0
++Classifier/MultiPath set nodetype_ 0
++Classifier/MultiPath set perflow_ 0
++Classifier/MultiPath set checkpathid_ 0
++Connector/ECtreap set tid_ 0
+\ No newline at end of file
+diff -uNr ns-2.35-org/lib/ns-node.tcl ns-2.35/lib/ns-node.tcl
+--- ns-2.35-org/lib/ns-node.tcl	2001-11-06 14:16:21.000000000 +0800
++++ ns-2.35/lib/ns-node.tcl	2019-02-02 16:27:10.056188000 +0800
+@@ -78,7 +78,8 @@
+ 		set address_ $id_
+ 	}
+ 	$self cmd addr $address_; # Propagate address_ into C++ space
+-	#$ns_ add-node $self $id_        
++	#$ns_ add-node $self $id_ 
++	Connector/ECtreap set tid_ $id_       
+ 	set neighbor_ ""
+ 	set agents_ ""
+ 	set dmux_ ""
+@@ -89,6 +90,8 @@
+ 
+ 	$self mk-default-classifier
+ 
++	$self insert-entry  "Base" [new Connector/ECtreap] "target"
++
+ 	# XXX Eventually these two should also be converted to modules
+ 	set multiPath_ [$class set multiPath_]
+ }
+@@ -340,6 +343,8 @@
+ 		set routes_($id) 1
+ 		return
+ 	}
++	 set nxtclsfr_ [$classifier_ target]
++
+ 	if {$routes_($id) <= 0 && [llength $ifs] == 1 && \
+ 			![info exists mpathClsfr_($id)]} {
+ 		$self add-route $id [$ifs head]
+@@ -351,13 +356,14 @@
+ 			# 2. migrate existing routes to that mclassifier
+ 			# 3. install the mclassifier in the node classifier_
+ 			#
+-			set mpathClsfr_($id) [new Classifier/MultiPath]
++	 		set mpathClsfr_($id) [new Classifier/MultiPath]
+ 			if {$routes_($id) > 0} {
+ 				assert "$routes_($id) == 1"
+ 				$mpathClsfr_($id) installNext \
+-						[$classifier_ in-slot? $id]
++						[$nxtclsfr_ in-slot? $id]
+ 			}
+-			$classifier_ install $id $mpathClsfr_($id)
++			$nxtclsfr_ install $id $mpathClsfr_($id)
++			
+ 		}
+ 		foreach L $ifs {
+ 			$mpathClsfr_($id) installNext [$L head]
+Binary files ns-2.35-org/lib/.ns-node.tcl.swp and ns-2.35/lib/.ns-node.tcl.swp differ
