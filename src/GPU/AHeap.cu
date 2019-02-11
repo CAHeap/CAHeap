@@ -375,7 +375,7 @@ int main(){
     char filename[100];
     printf("%d ",BATCH_SIZE);
 /**/    for(int i=0;i<10;++i){
-        sprintf(filename,"../../../data/5s/%d.dat",i);
+        sprintf(filename,"../../data/5s/%d.dat",i);
         experiment_filename(filename);
     }/**/
     sort(expr_result,expr_result+10);
